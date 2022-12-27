@@ -6,20 +6,30 @@ return res.json();
   init(data.hokkaido);
 });
 function init(hokkaido){
-  console.log(hokkaido);
-  // contents.innerHTML += `<div>${hokkaido[0].spot[0].title}</div>`
-  // contents.innerHTML += `<div>${hokkaido[0].spot[0].detail}</div>`
+  // console.log(hokkaido);
+  // console.log(hokkaido[0].spot[0],'spot');
+  // console.log(hokkaido[0].spot[0].img,'img');
   
   hokkaido[0].spot.forEach(function(el,key){
+    // let b = JSON.stringify(hokkaido[0].spot[0].url[2].url);
+    // console.log(b)
+    // console.log(JSON.stringify(hokkaido[0].spot[0].url[key].url),'imgs')
     contents.innerHTML += `
     <div class="title">${hokkaido[0].spot[key].title}</div>
-<div class="detail">${hokkaido[0].spot[key].detail}</div>
+    <div class="detail">${hokkaido[0].spot[key].detail}</div>
+    <div class="imgse"></div>
     `
   })
-  // hokkaido[0].spot[key].title
-  // hokkaido[0].spot[key].detail
+
+  const lists = document.querySelectorAll(".imgse");
+
+  hokkaido[0].spot[0].img.forEach(function(el,key){
+    lists[key].innerHTML += `
+    <img src="${hokkaido[0].spot[0].img[key].url}" alt="">
+    `
+  })
 }
-// console.log(hokkaido);
+
 const data = [
   {
     area: "spot01",
@@ -63,14 +73,10 @@ const data = [
   },
 ];
 
-
-
-// console.log(data);
-
 const contents = document.querySelector(".contents"),
   buttons = document.querySelector(".buttons");
 const numOfContent = data.length,
-  showContent = 3,
+  showContent = 6,
   showButton = 3,
   maxPage = Math.ceil(numOfContent / showContent);
 let page = 1;
