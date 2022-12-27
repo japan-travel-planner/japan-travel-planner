@@ -1,33 +1,33 @@
-fetch("./region.json")
-.then(function(res){
-return res.json();
-})
-.then(function(data){
-  init(data.hokkaido);
-});
-function init(hokkaido){
+fetch("./data.json")
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    init(data.location1);
+  });
+function init(location1) {
   // console.log(hokkaido);
   // console.log(hokkaido[0].spot[0],'spot');
   // console.log(hokkaido[0].spot[0].img,'img');
-  
-  hokkaido[0].spot.forEach(function(el,key){
+
+  location1.spot.forEach(function (el, key) {
     // let b = JSON.stringify(hokkaido[0].spot[0].url[2].url);
     // console.log(b)
     // console.log(JSON.stringify(hokkaido[0].spot[0].url[key].url),'imgs')
     contents.innerHTML += `
-    <div class="title">${hokkaido[0].spot[key].title}</div>
-    <div class="detail">${hokkaido[0].spot[key].detail}</div>
+    <div class="title">${location1.spot[key].title}</div>
+    <div class="detail">${location1.spot[key].detail}</div>
     <div class="imgse"></div>
-    `
-  })
+    `;
+  });
 
   const lists = document.querySelectorAll(".imgse");
 
-  hokkaido[0].spot[0].img.forEach(function(el,key){
+  location1.spot[0].img.forEach(function (el, key) {
     lists[key].innerHTML += `
-    <img src="${hokkaido[0].spot[0].img[key].url}" alt="">
-    `
-  })
+    <img src="${location1.spot[0].img[key].url}" alt="">
+    `;
+  });
 }
 
 const data = [
@@ -82,7 +82,7 @@ const numOfContent = data.length,
 let page = 1;
 
 const makeContent = (id) => {
-    console.log(id);
+  console.log(id);
   const content = document.createElement("li");
   //   console.log(data);
   content.classList.add("content");

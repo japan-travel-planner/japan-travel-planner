@@ -1,12 +1,13 @@
 {
-    "hokkaido" : [
+    "location1" : [
         {
-            "id" : "1",
+            "id" : "노보리베쓰",
             "img" : [
                 {"url":"..\/img/hokkaido/noboribetsu/noboribetsu_front"},
                 {"url":"..\/img/hokkaido/noboribetsu/noboribetsu_map_front"},
                 {"url":"..\/img/hokkaido/noboribetsu/noboribetsu_intro_positionmap"}
             ],
+            "category":"hokkaido",
             "place":"홋카이도의 대자연을 만끽",
             "title" : "홋카이도 노보리베쓰, 도야: 몸도 마음도 힐링되는 온천과 맛집 거리를 둘러보는 여행",
             "topic":"웅대한 자연을 체감할 수 있는 노보리베쓰, 도야 지역은 천혜의 자연과 힐링을 느낄 수 있는 인기 볼거리가 가득",
@@ -176,7 +177,7 @@
                         {"url":"..\/img/hokkaido/kushiro/spot5-3.jpg"},
                         {"url":"..\/img/hokkaido/kushiro/spot5-4.jpg"},
                         {"url":"..\/img/hokkaido/kushiro/spot5-5.jpg"},
-                        {"url":"..\/img/hokkaido/kushiro/spot5-6.jpg"} 
+                        {"url":"..\/img/hokkaido/kushiro/spot5-6.jpg"}
                     ],
                     "title":"시레토코고코",
                     "detail":"세계 자연 유산의 꿈과 같은 세계를 산책합니다."
