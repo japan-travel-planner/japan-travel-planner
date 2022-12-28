@@ -3,7 +3,7 @@ fetch("./data.json")
     return res.json();
   })
   .then(function (data) {
-    init(data.location1);
+    init(data.location24);
   });
 function init(location1) {
   // console.log(hokkaido);
