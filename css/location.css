@@ -13,8 +13,7 @@
     width: 700px;    
 }
 .main-pagination > a {
-    margin: 5px;
-    width: 70px;
+    margin: 5px 70px;
     font-size: 20px;
     text-align: center;
     padding-bottom: 5px;
