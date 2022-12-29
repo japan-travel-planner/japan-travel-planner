@@ -3,7 +3,8 @@ fetch("./data.json")
   .then(function (res) {
     return res.json();
   })
-  .then(function (data) {    
+  .then(function (data) {
+    
     let i = data.location23
     init(i);
   });
