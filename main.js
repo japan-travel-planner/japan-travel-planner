@@ -1,79 +1,94 @@
-
-fetch("./data.json")
+fetch("../test/data.json")
   .then(function (res) {
     return res.json();
   })
   .then(function (data) {
-    
-    let i = data.location23
-    init(i);
+    const regex = /(?:\/pages)\/(location\d{1,2})/;
+    const url = window.location.href;
+    console.log(url)
+    url.match(regex)
+    const result = url.match(regex);
+    console.log(url.match(regex))
+    console.log(result[1])
+    const links = result[1]
+    console.log(data[links])
+    init(data[links]);
+    // init(data.location2);
+    console.log(data)
+  console.log(Object.keys(data).length)
+  const locaData = Object.keys(data),
+  mainPages = document.querySelector('.main-pagination')
+  console.log(locaData)
+  locaData.forEach(function(el,key){
+    // console.log(el,key)
+    mainPages.innerHTML += `<a href="./location${key+1}.html">sub${key+1}</a>`
+  })
+  
   });
   
+  console.log(window.location.href)
 function init(location) {
-  // console.log(hokkaido);
-  // console.log(hokkaido[0].spot[0],'spot');
-  // console.log(hokkaido[0].spot[0].img,'img');
 
   location.spot.forEach(function (el, key) {
-    // let b = JSON.stringify(hokkaido[0].spot[0].url[2].url);
-    // console.log(b)
-    // console.log(JSON.stringify(hokkaido[0].spot[0].url[key].url),'imgs')
+
+    // console.log(key)
     contents.innerHTML += `
+    <section class="content_${key}">
+    <div class="text_content">
     <div class="title">${location.spot[key].title}</div>
     <div class="detail">${location.spot[key].detail}</div>
-    <div class="imgse"></div>
-    `;
-  });
-
-  const lists = document.querySelectorAll(".imgse");
-
-  location.spot[0].img.forEach(function (el, key) {
+    </div>
+    <div class="spot_main"></div>
+    <div class="spot_sub"></div>
+    
+    </section>`
+    ;
+    const lists = document.querySelectorAll(".spot_main");
+    
     lists[key].innerHTML += `
-    <img src="${location.spot[0].img[key].url}" alt="">
+    <img src="${location.spot[key].img[0].url}" alt="">
     `;
-  });
+    const nail = document.querySelectorAll('.spot_sub');
+
+    for (let i = 0 ; i<location.spot[0].img.length ; i++){
+      nail[key].innerHTML += `
+      <img src="${location.spot[key].img[i].url}" alt="">
+      `
+        }
+  });  
+
 }
 
 const data = [
   {
-    area: "spot01",
-    img: "./img/01.jpg",
+    area: "spot01"
   },
   {
-    area: "spot02",
-    img: "./img/02.jpg",
+    area: "spot02"
   },
   {
-    area: "spot03",
-    img: "./img/03.jpg",
+    area: "spot03"
   },
   {
-    area: "spot04",
-    img: "./img/04.jpg",
+    area: "spot04"
   },
   {
-    area: "spot05",
-    img: "./img/05.jpg",
+    area: "spot05"
   },
   {
-    area: "spot06",
-    img: "./img/06.jpg",
+    area: "spot06"
   },
   {
-    area: "spot07",
-    img: "./img/07.jpg",
+    area: "spot07"
   },
   {
-    area: "spot08",
-    img: "./img/08.jpg",
+    area: "spot08"
   },
   {
-    area: "spot09",
-    img: "./img/09.jpg",
+    area: "spot09"
   },
   {
-    area: "spot10",
-    img: "./img/10.jpg",
+    area: "spot10"
   },
 ];
 
@@ -90,10 +105,8 @@ const makeContent = (id) => {
   const content = document.createElement("li");
   //   console.log(data);
   content.classList.add("content");
-  content.innerHTML = `<img src="${
-    data[id - 1].img
-  }" alt="" class="content_img">
-                        <span class="content_title">${data[id - 1].area}</span>
+  content.innerHTML = `
+          <span class="content_title">${data[id - 1].area}</span>
         `;
   return content;
 };
@@ -177,4 +190,4 @@ const render = (page) => {
   renderButton(page);
 };
 
-render(page);
+// render(page);
