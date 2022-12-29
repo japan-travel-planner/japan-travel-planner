@@ -15,14 +15,29 @@
   <body>
     <article class="first">
       <h2>회원가입</h2>
-      <!-- <form action="" method="get"> -->
-        <input class="userid" type="text" placeholder="ID">
-        <input class="userpassword" type="text" placeholder="Password">
+      <form action="" method="get">
+        <input
+          class="useridgo"
+          type="text"
+          name=""
+          id="id"
+          placeholder="id를 입력해주세요 (5~12자)"
+          minlength="5"
+          maxlength="12"
+        />
+        <input
+          class="password"
+          id="password"
+          type="text"
+          placeholder="비밀번호를 입력해주세요 (4~8자)"
+          minlength="4"
+          maxlength="8"
+        />
         <button class="signup" type="submit">submit</button>
-      <!-- </form> -->
+      </form>
       <div></div>
     </article>
-    <!-- <article class="second">
+    <article class="second">
       <h2>로그인</h2>
       <form action="" method="get">
         <input
@@ -43,7 +58,7 @@
         />
         <button class="login" type="submit">submit</button>
       </form>
-    </article> -->
+    </article>
     <script src="user.js"></script>
   </body>
 </html>
