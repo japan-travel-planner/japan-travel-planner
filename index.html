@@ -63,39 +63,39 @@
       cursor: pointer;
     }
 
-    .button.active,
-    .button:hover {
-      color: #1f975d;
-      font-weight: 600;
-      text-decoration: underline;
+    .contents {
+      display: flex;
     }
 
-    .prev {
+    .content > a img {
+      width: 200px;
+      height: 150px;
+    }
+
+
+    .contents a {
+      position: relative;
+    }
+    .contents .front-map {
       position: absolute;
-      left: -2.5rem;
+      top: 0;
+      left: 30%;      
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      /* display: none; */
     }
 
-    .next {
-      position: absolute;
-      right: -2.5rem;
+    .on {
+      opacity: 1;
     }
 
-    ion-icon {
-      padding-top: 0.05rem;
-    }
-    .title {
-      border: 1px solid red;
-      width: 400px;
-      font-size: 20px;
-    }
-    .detail {
-      border: 1px solid blue;
-    }
+
   </style>
   <body>
-    <div class="main-pagination"></div>
-    <button class="buttons"></button>
-      <main class="contents"></main>
+    <div class="main-pagination"></div>    
+      <main class="contents">        
+      </main>
+      <div class="buttons"></div>
     <script src="./javascript/main.js"></script>
   </body>
 </html>
