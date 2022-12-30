@@ -3,15 +3,15 @@ fetch("../test/data.json")
     return res.json();
   })
   .then(function (data) {
-    // const regex = /(?:\/pages)\/(location\d{1,2})/;
-    // const url = window.location.href;
-    // console.log(url)
-    // url.match(regex)
-    // const result = url.match(regex);
-    // console.log(url.match(regex))
-    // console.log(result[1])
-    // const links = result[1]
-    // console.log(data[links])
+    const regex = /(?:\/pages)\/(location\d{1,2})/;
+    const url = window.location.href;
+    console.log(url)
+    url.match(regex)
+    const result = url.match(regex);
+    console.log(url.match(regex))
+    console.log(result[1])
+    const links = result[1]
+    console.log(data[links])
     init(data[links]);
     // init(data.location2);
     console.log(data)
