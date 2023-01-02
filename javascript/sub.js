@@ -5,32 +5,31 @@ fetch("../test/data.json")
   .then(function (data) {
     const regex = /(?:\/pages)\/(location\d{1,2})/;
     const url = window.location.href;
-    console.log(url);
+    // console.log(url);
     url.match(regex);
     const result = url.match(regex);
-    console.log(url.match(regex));
-    console.log(result[1]);
+    // console.log(url.match(regex));
+    // console.log(result[1]);
     const links = result[1];
-    console.log(data[links]);
+    // console.log(data[links]);
     init(data[links]);
     // init(data.location2);
-    console.log(data);
-    console.log(Object.keys(data).length);
+    // console.log(data);
+    // console.log(Object.keys(data).length);
     const locaData = Object.keys(data),
       mainPages = document.querySelector(".main-pagination");
-    console.log(locaData);
+    // console.log(locaData);
     locaData.forEach(function (el, key) {
       // console.log(el,key)
-      mainPages.innerHTML += `<a href="./location${key + 1}.html">sub${
-        key + 1
-      }</a>`;
+      mainPages.innerHTML += `<a href="./location${key + 1}.html">sub${key + 1
+        }</a>`;
     });
   });
 
-console.log(window.location.href);
+// console.log(window.location.href);
 function init(location) {
-  console.log(location.place);
-  console.log(mainTop);
+  // console.log(location.place);
+  // console.log(mainTop);
   mainTop.innerHTML += `
   <div class="post-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),url('${location.post}')";></div>
     <article class="line01">
@@ -47,7 +46,7 @@ function init(location) {
     contents.innerHTML += `<div class="trail-cont" style="background-image: url('../img/sub-location-img/${key}.svg')"></div>`;
 
     contents.innerHTML += `
-    <section class="content-zone">
+    <section class="content-zone ${key}">
     <div class="text_content">
     <div class="title">${location.spot[key].title}</div>
     <div class="detail">${location.spot[key].detail}</div>
@@ -56,8 +55,10 @@ function init(location) {
     <div class="spot_sub"></div>       
     </section>`;
 
+
     const lists = document.querySelectorAll(".spot_main"),
       sidebarLists = document.querySelector(".sidebar > ul");
+
 
     lists[key].innerHTML += `
     <img src="${location.spot[key].img[0].url}" alt="">
@@ -70,13 +71,15 @@ function init(location) {
       `;
     }
 
-    sidebarLists.innerHTML += `
-        
+    sidebarLists.innerHTML += `        
         <li>${key + 1}</li>
         `;
+
   });
 
   sideBar();
+
+
 }
 
 const contents = document.querySelector(".contents"),
@@ -122,7 +125,7 @@ function sideBar() {
       pos.y2 = pos.y;
       play = setTimeout(function () {
         elSection.forEach((el, key) => {
-          console.log(el.clientHeight);
+          // console.log(el.clientHeight);
           // 스크롤 down 일 시 sectionArry에 각 컨텐츠의 offsetTop 저장
           // sectionArry의 length값으로 각 컨텐츠의 위치를 찾고 찾은 위치 페이지네이션에 class Add
           if (pos.state) {
@@ -174,3 +177,66 @@ window.addEventListener("scroll", () => {
     sideNav.style = "display:none;";
   }
 });
+
+//======================썸네일 이미지 클릭시 메인이미지 변경==================
+
+window.addEventListener('load', () => {
+  const spotZone = document.querySelectorAll('.content-zone'),
+    spotMainImg = document.querySelectorAll('.spot_main > img'),
+    spotSubImg = document.querySelectorAll('.content-zone > .spot_sub');
+
+  // let key = 3;
+
+  console.log(spotSubImg)
+
+
+
+  //=================잘되는거 보존==========
+  // spotSubImg.forEach(function (el, key) {
+  //   spotSubImg[key].addEventListener('click', () => {
+
+  //     spotImgbox = spotSubImg[key].querySelectorAll('img');
+
+  //     spotImgbox.forEach(function (el, key) {
+  //       console.log(spotImgbox[key], 'img')
+  //       spotMainImg[0].src = spotImgbox[key].src
+  //     })
+
+  //     console.log(el, 'el')
+  //     console.log(key)
+
+  //     console.log(spotMainImg[key].src)
+  //     spotMainImg[0].src = `${spotMainImg[key].src}`
+  //   })
+  // })
+
+
+
+  // ========================수정 =======================
+
+  spotSubImg.forEach(function (el, key) {
+    console.log(el);
+    const spotImgbox = spotSubImg[key].querySelectorAll('img');
+    spotSubImg[key].addEventListener('click', function () {
+      console.log(this)
+      // console.log(bkey)
+
+      console.log(key, '컨텐츠존 key')
+      // console.log(bkey)
+      console.log(spotImgbox[1])
+      console.log(spotImgbox[2])
+
+      /* spotMainImg[key] */
+
+
+
+    })
+    spotImgbox.forEach(function (img, ikey) {
+      img.addEventListener('click', () => {
+        console.log(ikey, "ikey")
+        spotMainImg[key].src = `${spotImgbox[ikey].src}`
+      })
+    })
+  })
+})
+
