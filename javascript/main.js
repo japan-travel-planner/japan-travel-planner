@@ -14,20 +14,34 @@ function init (data) {
   console.log(dataArray[2][1].img[0])
   console.log(dataArray[2][1].img[1])
   console.log(pagiNation)
+  
+  //수정 //
+  let category = [];
+
+  const locationName = document.querySelector('.location-name'),
+  buttons =document.querySelector('.buttons'),
+  contents = document.querySelector(".contents"),
+  numOfContent = dataArray.length,      
+  showContent = 4,
+  showButton = 5,
+  maxPage = Math.ceil(numOfContent / showContent);
+  let page = 1;
+
+  
   dataArray.forEach(function(el,key){
     // pagiNation.innerHTML += `<div class="spot${key+1}"><a href="">
     // <img src="${(dataArray[key][1].img[0].url)}" alt=""></a></div>
     // `
+    if(!category.includes(el[1].category)){
+      category.push(el[1].category)
+    }
+    
   })
-
-
-  const buttons =document.querySelector('.buttons'),
-        contents = document.querySelector(".contents"),
-        numOfContent = dataArray.length,      
-        showContent = 4,
-        showButton = 5,
-        maxPage = Math.ceil(numOfContent / showContent);
-        let page = 1;
+  category.forEach(function(el,key){
+    locationName.innerHTML +=`<button class = ${el}> ${el}</button>`
+  })
+  
+ 
         
         const makeContent = (id) => {
           const content = document.createElement("div");
