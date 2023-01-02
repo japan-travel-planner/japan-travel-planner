@@ -1,101 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    .imgse > img {
-      border: 2px solid red;
-      width: 400px;
-      /* height: 300px; */
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    .article {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="./css/reset.css" rel="stylesheet">
+  <link href="./css/index.css" rel="stylesheet ">
 
-    .content {
-      display: flex;
-      padding: 0.3em 0;
-      list-style: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
+</head>
 
-    .content__id,
-    .content__author,
-    .content__date {
-      flex-basis: 15%;
-    }
+<body>
+  <header>
+    <div class="header-box">
+      <div class="logo">
+        <a href="#"><img src="../img/com/ana 2.png" /></a>
+      </div>
+      <div class="icon-box">
+        <div>
+          <a href="#">
+            <p>여행정보</p>
+          </a>
+        </div>
+        <div class="search">
+          <a href="#"><img src="../img/com/search.svg" /></a>
+        </div>
+        <div class="login">
+          <a href="#"><img src="../img/com/login.svg" /></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="main-top">
+    <div class="viewBox">
+      <div class="imgbox on">
+        <img src="./img/main-img/main-view-img01.jpg">
+      </div>
+      <div class="imgbox">
+        <img src="./img/main-img/main-view-img02.jpg">
+      </div>
+      <div class="imgbox">
+        <img src="./img/main-img/main-view-img03.jpg">
+      </div>
+      <div class="imgbox">
+        <img src="./img/main-img/main-view-img04.jpg">
+      </div>
+      <div class="imgbox">
+        <img src="./img/main-img/main-view-img05.jpg">
+      </div>
+    </div>
+    <div class="view-content-box">
+      <div class="view-content">
 
-    .content__title {
-      flex: 1;
-      text-align: left;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
+      </div>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">01</div>
+        <div class="swiper-slide">02</div>
+        <div class="swiper-slide">03</div>
+        <div class="swiper-slide">04</div>
+        <div class="swiper-slide">05</div>
+      </div>
+    </div>
+  </section>
+  <main class="content-box">
+    <div class="location-name"></div>
+    <div class="contents">
+    </div>
+    <div class="buttons"></div>
+  </main>
+  <footer>
+    <div class="footer-box">
+      <div class="view-box">
+        <div class="view-text">
+          <h3>
+            JAPAN AND<br />
+            TRAVEL PLANNER<br />
+            POINT
+          </h3>
+        </div>
+      </div>
+      <div class="footer-travel-box">
+        <div class="travel-text">
+          <p>
+            일본 여행 시 알아 두시면 편리한 공항 가이드 및 클래스별 서비스,
+            라운지 서비스 정보 등 여행 전에 확인하시면 편리한 정보와 얼리버트
+            예약으로 저렴한 특가 항공권을 만나보실수 있습니다.
+          </p>
+        </div>
+        <!-- <div class="logo-box">
+              <div>
+                <a href="#">
+                  <img src="../img/com/footer-logo-1.svg" />
+                </a>
+              </div>
+              <ul>
+                <li>
+                  <a href="#"><img src="../img/com/tiket1.svg" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../img/com/tiket2.svg" /></a>
+                </li>
+              </ul>
+            </div> -->
+      </div>
+      <div class="footer-content">
+        <div class="footet-logo-box">
+          <a href="#"><img src="../img/com/ana 2.png" /></a>
+        </div>
+        <div class="text-box">
+          <div class="text-content">
+            <ul>
+              <li>
+                <a href="#">
+                  <p>회사 개요</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>개인 정보 보호 정책</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>쿠키 정책</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>이용약관</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>권장 사양 안내</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>ANA SKY WEB</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <span>새 창에서 엽니다. 외부 사이트인 경우, 접근성 가이드라인에
+            대응하지 않을 수 있습니다.
+            <p>Copyright</p>
+            © ANA
+          </span>
+        </div>
+        <div class="footer-icon-box">
+          <a href="#"><img src="../img/com/facebook 3.svg" /></a>
+          <a href="#"><img src="../img/com/tiktok 3.svg" /></a>
+          <a href="#"><img src="../img/com/instagram 3.svg" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./javascript/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    .buttons {
-      position: relative;
-      padding: 1rem 0;
-      display: inline-flex;
-      justify-content: center;
-    }
+  <!-- Initialize Swiper -->
+  <script>
+    let imgIdx = 0;
+    const view = document.querySelectorAll('.swiper-slide');
+    const viewImg = document.querySelectorAll('.imgbox');
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      speed: 2000,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
 
-    .button {
-      padding: 0 1rem;
-      font-size: 1.2rem;
-      color: #333;
-      background: transparent;
-      border: 0;
-      outline: 0;
-      cursor: pointer;
-    }
+      },
+      slidesPerView: 5,
+      direction: "vertical",
+      on: {
+        activeIndexChange: function () {
+          viewImg[imgIdx].classList.remove('on');
+          viewImg[this.realIndex].classList.add('on');
+          imgIdx = this.realIndex;
+        }
+      }
+    });
+    let idx = 0;
+    view.forEach((el, key) => {
 
-    .contents {
-      display: flex;
-    }
+      el.addEventListener('click', () => {
+        viewImg[idx].classList.remove('on');
+        viewImg[key % 5].classList.add('on');
+        idx = key % 5;
+      })
+    }) 
+  </script>
+</body>
 
-    .content > a img {
-      width: 200px;
-      height: 150px;
-    }
-
-
-    .contents a {
-      position: relative;
-    }
-    .contents .front-map {
-      position: absolute;
-      top: 0;
-      left: 30%;      
-      background-color: rgba(0, 0, 0, 0.7);
-      opacity: 0;
-      /* display: none; */
-    }
-
-    .on {
-      opacity: 1;
-    }
-
-
-  </style>
-  <body>
-    <div class="main-pagination"></div>    
-      <main class="contents">        
-      </main>
-      <div class="buttons"></div>
-    <script src="./javascript/main.js"></script>
-  </body>
 </html>
