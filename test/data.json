@@ -1,7 +1,7 @@
 {
   "location1": {
     "id": "노보리베쓰",
-    "category": "hokkaido",
+    "category": "후쿠오카",
     "img": [
       { "url": "../img/location-data/location1/location1_front.jpg" },
       { "url": "../img/location-data/location1/location1_front_map.svg" }
@@ -108,7 +108,7 @@
   },
   "location2": {
     "id": "구시로",
-    "category": "hokkaido",
+    "category": "후쿠오카",
     "img": [
       { "url": "../img/location-data/location2/location2_front.jpg" },
       { "url": "../img/location-data/location2/location2_front_map.svg" }
@@ -189,7 +189,7 @@
   },
   "location3": {
     "id": "하코다테",
-    "category": "hokkaido",
+    "category": "후쿠오카",
     "img": [
       { "url": "../img/location-data/location3/location3_front.jpg" },
       { "url": "../img/location-data/location3/location3_front_map.svg" }
@@ -270,7 +270,7 @@
   },
   "location4": {
     "id": "아사히다케",
-    "category": "hokkaido",
+    "category": "후쿠오카",
     "img": [
       { "url": "../img/location-data/location4/location4_front.jpg" },
       { "url": "../img/location-data/location4/location4_front_map.svg" }
@@ -364,7 +364,7 @@
   },
   "location5": {
     "id": "야마가타 쇼나이",
-    "category": "tohoku",
+    "category": "도후쿠",
     "img": [
       { "url": "../img/location-data/location5/location5_front.jpg" },
       { "url": "../img/location-data/location5/location5_front_map.svg" }
@@ -471,7 +471,7 @@
   },
   "location6": {
     "id": "후쿠시마",
-    "category": "tohoku",
+    "category": "도후쿠",
     "img": [
       { "url": "../img/location-data/location6/location6_front.jpg" },
       { "url": "../img/location-data/location6/location6_front_map.svg" }
@@ -578,7 +578,7 @@
   },
   "location7": {
     "id": "자오",
-    "category": "tohoku",
+    "category": "도후쿠",
     "img": [
       { "url": "../img/location-data/location7/location7_front.jpg" },
       { "url": "../img/location-data/location7/location7_front_map.svg" }
@@ -672,7 +672,7 @@
   },
   "location8": {
     "id": "자오",
-    "category": "kanto",
+    "category": "간토",
     "img": [
       { "url": "../img/location-data/location8/location8_front.jpg" },
       { "url": "../img/location-data/location8/location8_front_map.svg" }
@@ -779,7 +779,7 @@
   },
   "location9": {
     "id": "도쿄",
-    "category": "kanto",
+    "category": "간토",
     "img": [
       { "url": "../img/location-data/location9/location9_front.jpg" },
       { "url": "../img/location-data/location9/location9_front_map.svg" }
@@ -873,7 +873,7 @@
   },
   "location10": {
     "id": "하코네",
-    "category": "kanto",
+    "category": "간토",
     "img": [
       { "url": "../img/location-data/location10/location10_front.jpg" },
       { "url": "../img/location-data/location10/location10_front_map.svg" }
@@ -980,7 +980,7 @@
   },
   "location11": {
     "id": "후지산",
-    "category": "chubu",
+    "category": "주부",
     "img": [
       { "url": "../img/location-data/location11/location11_front.jpg" },
       { "url": "../img/location-data/location11/location11_front_map.svg" }
@@ -1087,7 +1087,7 @@
   },
   "location12": {
     "id": "도야마",
-    "category": "chubu",
+    "category": "주부",
     "img": [
       { "url": "../img/location-data/location12/location12_front.jpg" },
       { "url": "../img/location-data/location12/location12_front_map.svg" }
@@ -1194,7 +1194,7 @@
   },
   "location13": {
     "id": "복고풍의 설경",
-    "category": "chubu",
+    "category": "주부",
     "img": [
       { "url": "../img/location-data/location13/location13_front.jpg" },
       { "url": "../img/location-data/location13/location13_front_map.svg" }
@@ -1301,7 +1301,7 @@
   },
   "location14": {
     "id": "다테야마 구로베",
-    "category": "chubu",
+    "category": "주부",
     "img": [
       { "url": "../img/location-data/location14/location14_front.jpg" },
       { "url": "../img/location-data/location14/location14_front_map.svg" }
@@ -1395,7 +1395,7 @@
   },
   "location15": {
     "id": "고야산에서의 숙방",
-    "category": "kansai",
+    "category": "간사이",
     "img": [
       { "url": "../img/location-data/location15/location15_front.jpg" },
       { "url": "../img/location-data/location15/location15_front_map.svg" }
@@ -1502,7 +1502,7 @@
   },
   "location16": {
     "id": "호화 관광 특급",
-    "category": "kansai",
+    "category": "간사이",
     "img": [
       { "url": "../img/location-data/location16/location16_front.jpg" },
       { "url": "../img/location-data/location16/location16_front_map.svg" }
@@ -1609,7 +1609,7 @@
   },
   "location17": {
     "id": "히에이잔 엔랴큐지",
-    "category": "kansai",
+    "category": "간사이",
     "img": [
       { "url": "../img/location-data/location17/location17_front.jpg" },
       { "url": "../img/location-data/location17/location17_front_map.svg" }
@@ -1716,7 +1716,7 @@
   },
   "location18": {
     "id": "유네스코 세계 유산 여행",
-    "category": "kansai",
+    "category": "간사이",
     "img": [
       { "url": "../img/location-data/location18/location18_front.jpg" },
       { "url": "../img/location-data/location18/location18_front_map.svg" }
@@ -1810,7 +1810,7 @@
   },
   "location19": {
     "id": "히로시마",
-    "category": "chugoku",
+    "category": "주고쿠",
     "img": [
       { "url": "../img/location-data/location19/location19_front.jpg" },
       { "url": "../img/location-data/location19/location19_front_map.svg" }
@@ -1917,7 +1917,7 @@
   },
   "location20": {
     "id": "시코쿠",
-    "category": "shikoku",
+    "category": "시코쿠",
     "img": [
       { "url": "../img/location-data/location20/location20_front.jpg" },
       { "url": "../img/location-data/location20/location20_front_map.svg" }
@@ -2024,7 +2024,7 @@
   },
   "location21": {
     "id": "세계문화유산 구마모토",
-    "category": "kyushu",
+    "category": "규슈",
     "img": [
       { "url": "../img/location-data/location21/location21_front.jpg" },
       { "url": "../img/location-data/location21/location21_front_map.svg" }
@@ -2131,7 +2131,7 @@
   },
   "location22": {
     "id": "사가의 역사와 문화를 접하는 여행",
-    "category": "kyushu",
+    "category": "규슈",
     "img": [
       { "url": "../img/location-data/location22/location22_front.jpg" },
       { "url": "../img/location-data/location22/location22_front_map.svg" }
@@ -2238,7 +2238,7 @@
   },
   "location23": {
     "id": "나가사키, 고토 후쿠에",
-    "category": "kyushu",
+    "category": "규슈",
     "img": [
       { "url": "../img/location-data/location23/location23_front.jpg" },
       { "url": "../img/location-data/location23/location23_front_map.svg" }
@@ -2345,7 +2345,7 @@
   },
   "location24": {
     "id": "쓰시마, 이키",
-    "category": "kyushu",
+    "category": "규슈",
     "img": [
       { "url": "../img/location-data/location24/location24_front.jpg" },
       { "url": "../img/location-data/location24/location24_front_map.svg" }
@@ -2452,7 +2452,7 @@
   },
   "location25": {
     "id": "이시가키지마, 다케토미지마",
-    "category": "okinawa",
+    "category": "오키나와",
     "img": [
       { "url": "../img/location-data/location25/location25_front.jpg" },
       { "url": "../img/location-data/location25/location25_front_map.svg" }

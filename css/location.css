@@ -73,7 +73,7 @@ header {
 .icon-box > div > a > p {
   color: #fff;
 }
-
+/* 메인 */
 .main-pagination {
   position: absolute;
   z-index: 22;
