@@ -139,11 +139,11 @@ function init(data) {
         contents.removeChild(contents.lastChild);
       }
       let count = 0;
-      let test = [];
+      let locationKey = [];
       categoryPage = el.className;
       dataArray.forEach((el, key) => {
         if (el[1].category == categoryPage) {
-          test.push(key)
+          locationKey.push(key)
           count++;
         }
       })
@@ -157,9 +157,9 @@ function init(data) {
         for (let i = 0; i < count; i++) {
           const content = document.createElement("div");
           content.classList.add("content");
-          content.innerHTML = `<a href="../pages/location${test[i]+1}.html" class="">
-      <img class="front-img" src="${(dataArray[test[i]][1].img[0].url)}" alt="">
-      <img class="front-map" src="${(dataArray[test[i]][1].img[1].url)}" alt="">
+          content.innerHTML = `<a href="../pages/location${locationKey[i]+1}.html" class="">
+      <img class="front-img" src="${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
+      <img class="front-map" src="${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
       </a>
       `;
           contents.appendChild(content)
