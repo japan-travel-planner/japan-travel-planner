@@ -3,8 +3,8 @@
     "id": "노보리베쓰",
     "category": "후쿠오카",
     "img": [
-      { "url": "../img/location-data/location1/location1_front.jpg" },
-      { "url": "../img/location-data/location1/location1_front_map.svg" }
+      { "url": "./img/location-data/location1/location1_front.jpg" },
+      { "url": "./img/location-data/location1/location1_front_map.svg" }
     ],
     "post": "../img/location-data/location1/location1_head.jpg",
     "place": "홋카이도의 대자연을 만끽",
@@ -110,8 +110,8 @@
     "id": "구시로",
     "category": "후쿠오카",
     "img": [
-      { "url": "../img/location-data/location2/location2_front.jpg" },
-      { "url": "../img/location-data/location2/location2_front_map.svg" }
+      { "url": "./img/location-data/location2/location2_front.jpg" },
+      { "url": "./img/location-data/location2/location2_front_map.svg" }
     ],
     "post": "../img/location-data/location2/location2_head.jpg",
     "place": "여름의 홋카이도",
@@ -191,8 +191,8 @@
     "id": "하코다테",
     "category": "후쿠오카",
     "img": [
-      { "url": "../img/location-data/location3/location3_front.jpg" },
-      { "url": "../img/location-data/location3/location3_front_map.svg" }
+      { "url": "./img/location-data/location3/location3_front.jpg" },
+      { "url": "./img/location-data/location3/location3_front_map.svg" }
     ],
     "post": "../img/location-data/location3/location3_head.jpg",
     "place": "홋카이도에서 즐기는 봄 꽃놀이",
@@ -272,8 +272,8 @@
     "id": "아사히다케",
     "category": "후쿠오카",
     "img": [
-      { "url": "../img/location-data/location4/location4_front.jpg" },
-      { "url": "../img/location-data/location4/location4_front_map.svg" }
+      { "url": "./img/location-data/location4/location4_front.jpg" },
+      { "url": "./img/location-data/location4/location4_front_map.svg" }
     ],
     "post": "../img/location-data/location4/location4_head.jpg",
     "place": "초여름의 홋카이도 여행",
@@ -366,8 +366,8 @@
     "id": "야마가타 쇼나이",
     "category": "도후쿠",
     "img": [
-      { "url": "../img/location-data/location5/location5_front.jpg" },
-      { "url": "../img/location-data/location5/location5_front_map.svg" }
+      { "url": "./img/location-data/location5/location5_front.jpg" },
+      { "url": "./img/location-data/location5/location5_front_map.svg" }
     ],
     "post": "../img/location-data/location5/location5_head.jpg",
     "place": "동해의 도호쿠 풍경을 찾아서",
@@ -473,8 +473,8 @@
     "id": "후쿠시마",
     "category": "도후쿠",
     "img": [
-      { "url": "../img/location-data/location6/location6_front.jpg" },
-      { "url": "../img/location-data/location6/location6_front_map.svg" }
+      { "url": "./img/location-data/location6/location6_front.jpg" },
+      { "url": "./img/location-data/location6/location6_front_map.svg" }
     ],
     "post": "../img/location-data/location6/location6_head.jpg",
     "place": "매력 넘치는 후쿠시마를 만끽",
@@ -580,8 +580,8 @@
     "id": "자오",
     "category": "도후쿠",
     "img": [
-      { "url": "../img/location-data/location7/location7_front.jpg" },
-      { "url": "../img/location-data/location7/location7_front_map.svg" }
+      { "url": "./img/location-data/location7/location7_front.jpg" },
+      { "url": "./img/location-data/location7/location7_front_map.svg" }
     ],
     "post": "../img/location-data/location7/location7_head.jpg",
     "place": "겨울에 가고 싶은 도호쿠의 명소",
@@ -674,8 +674,8 @@
     "id": "자오",
     "category": "간토",
     "img": [
-      { "url": "../img/location-data/location8/location8_front.jpg" },
-      { "url": "../img/location-data/location8/location8_front_map.svg" }
+      { "url": "./img/location-data/location8/location8_front.jpg" },
+      { "url": "./img/location-data/location8/location8_front_map.svg" }
     ],
     "post": "../img/location-data/location8/location8_head.jpg",
     "place": "지바를 로드 트립",
@@ -781,8 +781,8 @@
     "id": "도쿄",
     "category": "간토",
     "img": [
-      { "url": "../img/location-data/location9/location9_front.jpg" },
-      { "url": "../img/location-data/location9/location9_front_map.svg" }
+      { "url": "./img/location-data/location9/location9_front.jpg" },
+      { "url": "./img/location-data/location9/location9_front_map.svg" }
     ],
     "post": "../img/location-data/location9/location9_head.jpg",
     "place": "도쿄의 놓칠 수 없는 명소",
@@ -875,8 +875,8 @@
     "id": "하코네",
     "category": "간토",
     "img": [
-      { "url": "../img/location-data/location10/location10_front.jpg" },
-      { "url": "../img/location-data/location10/location10_front_map.svg" }
+      { "url": "./img/location-data/location10/location10_front.jpg" },
+      { "url": "./img/location-data/location10/location10_front_map.svg" }
     ],
     "post": "../img/location-data/location10/location10_head.jpg",
     "place": "가나가와 추천 명소",
@@ -982,8 +982,8 @@
     "id": "후지산",
     "category": "주부",
     "img": [
-      { "url": "../img/location-data/location11/location11_front.jpg" },
-      { "url": "../img/location-data/location11/location11_front_map.svg" }
+      { "url": "./img/location-data/location11/location11_front.jpg" },
+      { "url": "./img/location-data/location11/location11_front_map.svg" }
     ],
     "post": "../img/location-data/location11/location11_head.jpg",
     "place": "여름에 즐기는 야마나시와 나가노",
@@ -1089,8 +1089,8 @@
     "id": "도야마",
     "category": "주부",
     "img": [
-      { "url": "../img/location-data/location12/location12_front.jpg" },
-      { "url": "../img/location-data/location12/location12_front_map.svg" }
+      { "url": "./img/location-data/location12/location12_front.jpg" },
+      { "url": "./img/location-data/location12/location12_front_map.svg" }
     ],
     "post": "../img/location-data/location12/location12_head.jpg",
     "place": "장엄한 도야마를 찾다",
@@ -1196,8 +1196,8 @@
     "id": "복고풍의 설경",
     "category": "주부",
     "img": [
-      { "url": "../img/location-data/location13/location13_front.jpg" },
-      { "url": "../img/location-data/location13/location13_front_map.svg" }
+      { "url": "./img/location-data/location13/location13_front.jpg" },
+      { "url": "./img/location-data/location13/location13_front_map.svg" }
     ],
     "post": "../img/location-data/location13/location13_head.jpg",
     "place": "도야마의 아름다운 자연을 체감",
@@ -1303,8 +1303,8 @@
     "id": "다테야마 구로베",
     "category": "주부",
     "img": [
-      { "url": "../img/location-data/location14/location14_front.jpg" },
-      { "url": "../img/location-data/location14/location14_front_map.svg" }
+      { "url": "./img/location-data/location14/location14_front.jpg" },
+      { "url": "./img/location-data/location14/location14_front_map.svg" }
     ],
     "post": "../img/location-data/location14/location14_head.jpg",
     "place": "호쿠리쿠의 볼거리",
@@ -1397,8 +1397,8 @@
     "id": "고야산에서의 숙방",
     "category": "간사이",
     "img": [
-      { "url": "../img/location-data/location15/location15_front.jpg" },
-      { "url": "../img/location-data/location15/location15_front_map.svg" }
+      { "url": "./img/location-data/location15/location15_front.jpg" },
+      { "url": "./img/location-data/location15/location15_front_map.svg" }
     ],
     "post": "../img/location-data/location15/location15_head.jpg",
     "place": "전철로 돌아보는 간사이: 고야산",
@@ -1504,8 +1504,8 @@
     "id": "호화 관광 특급",
     "category": "간사이",
     "img": [
-      { "url": "../img/location-data/location16/location16_front.jpg" },
-      { "url": "../img/location-data/location16/location16_front_map.svg" }
+      { "url": "./img/location-data/location16/location16_front.jpg" },
+      { "url": "./img/location-data/location16/location16_front_map.svg" }
     ],
     "post": "../img/location-data/location16/location16_head.jpg",
     "place": "전철로 돌아보는 간사이:요시노야마",
@@ -1611,8 +1611,8 @@
     "id": "히에이잔 엔랴큐지",
     "category": "간사이",
     "img": [
-      { "url": "../img/location-data/location17/location17_front.jpg" },
-      { "url": "../img/location-data/location17/location17_front_map.svg" }
+      { "url": "./img/location-data/location17/location17_front.jpg" },
+      { "url": "./img/location-data/location17/location17_front_map.svg" }
     ],
     "post": "../img/location-data/location17/location17_head.jpg",
     "place": "전철로 돌아보는 간사이: 히에이잔",
@@ -1718,8 +1718,8 @@
     "id": "유네스코 세계 유산 여행",
     "category": "간사이",
     "img": [
-      { "url": "../img/location-data/location18/location18_front.jpg" },
-      { "url": "../img/location-data/location18/location18_front_map.svg" }
+      { "url": "./img/location-data/location18/location18_front.jpg" },
+      { "url": "./img/location-data/location18/location18_front_map.svg" }
     ],
     "post": "../img/location-data/location18/location18_head.jpg",
     "place": "간사이의 놓칠 수 없는 명소",
@@ -1812,8 +1812,8 @@
     "id": "히로시마",
     "category": "주고쿠",
     "img": [
-      { "url": "../img/location-data/location19/location19_front.jpg" },
-      { "url": "../img/location-data/location19/location19_front_map.svg" }
+      { "url": "./img/location-data/location19/location19_front.jpg" },
+      { "url": "./img/location-data/location19/location19_front_map.svg" }
     ],
     "post": "../img/location-data/location19/location19_head.jpg",
     "place": "히로시마에서 방문해야 할 명소",
@@ -1919,8 +1919,8 @@
     "id": "시코쿠",
     "category": "시코쿠",
     "img": [
-      { "url": "../img/location-data/location20/location20_front.jpg" },
-      { "url": "../img/location-data/location20/location20_front_map.svg" }
+      { "url": "./img/location-data/location20/location20_front.jpg" },
+      { "url": "./img/location-data/location20/location20_front_map.svg" }
     ],
     "post": "../img/location-data/location20/location20_head.jpg",
     "place": "신비의 섬 시코쿠",
@@ -2026,8 +2026,8 @@
     "id": "세계문화유산 구마모토",
     "category": "규슈",
     "img": [
-      { "url": "../img/location-data/location21/location21_front.jpg" },
-      { "url": "../img/location-data/location21/location21_front_map.svg" }
+      { "url": "./img/location-data/location21/location21_front.jpg" },
+      { "url": "./img/location-data/location21/location21_front_map.svg" }
     ],
     "post": "../img/location-data/location21/location21_head.jpg",
     "place": "기도의 섬, 아마쿠사",
@@ -2133,8 +2133,8 @@
     "id": "사가의 역사와 문화를 접하는 여행",
     "category": "규슈",
     "img": [
-      { "url": "../img/location-data/location22/location22_front.jpg" },
-      { "url": "../img/location-data/location22/location22_front_map.svg" }
+      { "url": "./img/location-data/location22/location22_front.jpg" },
+      { "url": "./img/location-data/location22/location22_front_map.svg" }
     ],
     "post": "../img/location-data/location22/location22_head.jpg",
     "place": "사가의 문화 찾기",
@@ -2240,8 +2240,8 @@
     "id": "나가사키, 고토 후쿠에",
     "category": "규슈",
     "img": [
-      { "url": "../img/location-data/location23/location23_front.jpg" },
-      { "url": "../img/location-data/location23/location23_front_map.svg" }
+      { "url": "./img/location-data/location23/location23_front.jpg" },
+      { "url": "./img/location-data/location23/location23_front_map.svg" }
     ],
     "post": "../img/location-data/location23/location23_head.jpg",
     "place": "나가사키의 놓칠 수 없는 명소",
@@ -2347,8 +2347,8 @@
     "id": "쓰시마, 이키",
     "category": "규슈",
     "img": [
-      { "url": "../img/location-data/location24/location24_front.jpg" },
-      { "url": "../img/location-data/location24/location24_front_map.svg" }
+      { "url": "./img/location-data/location24/location24_front.jpg" },
+      { "url": "./img/location-data/location24/location24_front_map.svg" }
     ],
     "post": "../img/location-data/location24/location24_head.jpg",
     "place": "나가사키의 낙도",
@@ -2454,8 +2454,8 @@
     "id": "이시가키지마, 다케토미지마",
     "category": "오키나와",
     "img": [
-      { "url": "../img/location-data/location25/location25_front.jpg" },
-      { "url": "../img/location-data/location25/location25_front_map.svg" }
+      { "url": "./img/location-data/location25/location25_front.jpg" },
+      { "url": "./img/location-data/location25/location25_front_map.svg" }
     ],
     "post": "../img/location-data/location25/location25_head.jpg",
     "place": "오키나와의 낙도",

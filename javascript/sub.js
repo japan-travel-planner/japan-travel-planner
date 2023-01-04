@@ -19,11 +19,11 @@ fetch("../test/data.json")
     const locaData = Object.keys(data),
       mainPages = document.querySelector(".main-pagination");
     // console.log(locaData);
-    locaData.forEach(function (el, key) {
-      // console.log(el,key)
-      mainPages.innerHTML += `<a href="./location${key + 1}.html">sub${key + 1
-        }</a>`;
-    });
+    // locaData.forEach(function (el, key) {
+    //   // console.log(el,key)
+    //   mainPages.innerHTML += `<a href="./location${key + 1}.html">sub${key + 1
+    //     }</a>`;
+    // });
   });
 
 // console.log(window.location.href);
@@ -64,7 +64,7 @@ function init(location) {
     <img src="${location.spot[key].img[0].url}" alt="">
     `;
     const nail = document.querySelectorAll(".spot_sub");
-    
+
     for (let i = 0; i < location.spot[0].img.length; i++) {
       nail[key].innerHTML += `
       <img src="${location.spot[key].img[i].url}" alt="">

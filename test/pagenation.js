@@ -56,9 +56,8 @@ const makeContent = (id) => {
   const content = document.createElement("li");
   //   console.log(data);
   content.classList.add("content");
-  content.innerHTML = `<img src="${
-    data[id - 1].img
-  }" alt="" class="content_img">
+  content.innerHTML = `<img src="${data[id - 1].img
+    }" alt="" class="content_img">
                         <span class="content_title">${data[id - 1].area}</span>
         `;
   return content;
