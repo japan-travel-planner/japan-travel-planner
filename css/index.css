@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /* 헤더 */
 header {
     width: 1300px;
@@ -10,6 +15,7 @@ header {
 }
 
 .header-box {
+
     max-width: 1300px;
     display: flex;
     justify-content: space-between;
@@ -48,14 +54,21 @@ header {
     z-index: 1;
     overflow: hidden;
 }
-
-
-.viewBox{
+.viewBox {
     height: 1080px;
-    
-    
 }
-.viewBox::after{
+.viewBox::before{
+    z-index: 999;
+    content: "";
+    width: 100%;
+    height: 359px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: linear-gradient(360deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+}
+.viewBox::after {
     content: "";
     display: block;
     width: 300px;
@@ -64,39 +77,99 @@ header {
     right: 0;
     bottom: 50%;
     transform: translateY(-200%);
-
+    
 }
-.viewBox > .imgbox {
+
+.viewBox>.imgbox {
     width: 100%;
 
     position: absolute;
     top: 0;
     opacity: 0;
-    transition: 1s;
+    transition: 2s;
 
 }
+
 .imgbox.on {
     opacity: 1;
-    
-  }
-.viewBox > .imgbox > img{
-    width: 100%;
-    
 
 }
-.view-content-box{
+.viewBox>.imgbox>img {
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    filter: brightness(90%);
+
+}
+.view-content-box {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 800px;
-    padding : 0 310px;
+    padding: 0 310px;
 }
-.view-content{
+
+.view-content {
     width: 100%;
     height: 500px;
 }
+
+.view-text-box {
+    padding-left: 310px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    height: 500px;
+    bottom: 30%;
+    left: 0;
+    color: #fff;
+}
+
+.view-text-box>.map-box {
+    position: relative;
+    margin-bottom: 100px;
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+.view-text-box>.map-box>span {
+    font-size: 100px;
+    font-weight: bold;
+
+}
+
+.view-text-box>.map-box>img {
+    width: 200px;
+    transform: translate(-10%, 10%);
+
+}
+
+.view-text-box>h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
+
+}
+
+.view-text-box>p {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.view-text-box>div {
+    margin: 30px 30px 30px 0px;
+    width: 139px;
+    height: 52px;
+    
+    /*  background-color: #fff; */
+}
+
 /* 슬라이드 시작 */
-.swiper{
+.swiper {
     overflow: hidden;
     height: 150px;
     position: absolute;
@@ -106,85 +179,145 @@ header {
     z-index: 3;
     text-align: end;
 }
-.swiper-wrapper{
 
-}
-.swiper-wrapper>.swiper-slide{
+
+
+.swiper>.swiper-wrapper>.swiper-slide {
     width: 50px;
     height: 30px;
     cursor: pointer;
-}
-.swiper > .swiper-wrapper > .swiper-slide{
-    color: #fff;
+    color: rgba(255, 255, 255, 0.6);
     font-weight: bold;
+    font-size: 24px;
+}
+.swiper>.swiper-wrapper>.swiper-slide-active{
+    color: #fff;
     font-size: 28px;
 }
+
 /* 슬라이드 끝 */
+/* 다른여정 시작  */
+.location-name{
+    display: flex;
+    justify-content: end;
+    width: 1300px;
+}
+.location-name>button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 0.5rem;
+    position:relative;
+    font-family: "Noto Sans KR";
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    border: none;
+    background:none;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center; 
+}
+.location-name>button.on{
+    color: #fff;
+
+}
+
+.location-name>button:nth-last-child(1){
+    padding-right: 0;
+}
+.location-name>button::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1rem;
+    border-left: 1px solid #E2E1E1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.location-name>button:nth-last-child(1)::after{
+    border: none;
+}
 .content-box {
-    height: 500px;
-    width: 100%;
-    padding-top: 100px;
     background-color: #192229;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: center; 
+    position: relative;
 }
+.content-box>.ex-box {
+
+    text-align: center;
+    margin: 100px 0;
+
+}
+
+.content-box>.ex-box>p {
+
+    font-size: 38px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.content-box>.ex-box>span {
+
+    font-size: 38px;
+    color: #fff;
+    line-height: 46%;
+}
+
+.content-box>.ex-box>span:nth-child(1) {
+    transform: translateX(10%);
+}
+
 
 .content {
     display: flex;
     padding: 0.3em 0;
     list-style: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.content__id,
-.content__author,
-.content__date {
-    flex-basis: 15%;
-}
-
-.content__title {
-    flex: 1;
-    text-align: left;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.buttons {
-    position: relative;
-    padding: 1rem 0;
-    display: inline-flex;
-    justify-content: center;
-}
-
-.buttons.on {
-    display: none;
-}
-
-.button {
-    padding: 0 1rem;
-    font-size: 1.2rem;
-    color: #333;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
+    margin-bottom: 50px;
 }
 
 .contents {
+    width: 1300px;
     position: relative;
     display: flex;
+    justify-content: space-around;
 
 }
-
+.content{
+    position: relative;
+}
 .content>a img {
-    width: 200px;
-    height: 150px;
+    width: 320px;
+    height: 430px;
+    
+    filter: brightness(80%);
+    
+border-radius: 2px;
 }
-
-
+.location-text-box{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+}
+.location-text-box>h3{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.location-text-box>span{
+    font-size: 18px;
+    font-weight: 400;
+}
 .contents a {
     position: relative;
 }
@@ -197,17 +330,42 @@ header {
     opacity: 0;
     /* display: none; */
 }
-
-.on {
-    opacity: 1;
+.btn-box {
+    width: 100%;
+    height: 100px;
+    text-align: center;
 }
 
+.buttons {
+
+    padding: 1rem 0;
+    display: inline-flex;
+    justify-content: center;
+
+}
+.buttons.on {
+    display: none;
+}
+
+.button {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.buttons>.active{
+    color: #fff;
+}
+/* 다른여정 끝  */
 /* 푸터 */
 
 footer {
+    position: relative;
     width: 100%;
-    height: 600px;
-    margin: 0;
+    height: 800px;
     background-image: url(../img/com/footer-img-1.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -217,23 +375,34 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 50px;
+    
 }
-
+footer::after{
+    content: "";
+    width: 100%;
+    height: 359px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background: linear-gradient(180deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+}
 .footer-box {
     max-width: 1300px;
     margin: 0 auto;
+    
 }
 
 .view-box {
-    /* padding-top: 300px; */
+    padding-bottom: 150px;
     width: 100%;
-    /* height: 700px; */
+
 }
 
 .view-box>.view-text {
-    /* padding-top: 300px; */
     width: 50%;
+    position: relative;
+    z-index: 10;
 }
 
 .view-box>.view-text>h3 {
@@ -242,13 +411,8 @@ footer {
 }
 
 .footer-travel-box {
-    /* 
-           */
     width: 100%;
-    /* height: 500px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-bottom: 100px;
 }
 
 .footer-travel-box>.travel-text {
@@ -261,7 +425,7 @@ footer {
     line-height: 165.5%;
 }
 
-.footer-travel-box>.logo-box {
+/* .footer-travel-box>.logo-box {
     width: 50%;
     display: flex;
 }
@@ -278,11 +442,11 @@ footer {
     position: absolute;
     top: 70px;
     left: -14px;
-}
+} */
 
 .footer-box>.footer-content {
     border-top: 2px solid #fff;
-    /* height: 130px; */
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;

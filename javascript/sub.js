@@ -70,13 +70,8 @@ function init(location) {
       <img src="${location.spot[key].img[i].url}" alt="">
       `;
     }
-<<<<<<< HEAD
     sidebarLists.innerHTML += `
         
-=======
-
-    sidebarLists.innerHTML += `        
->>>>>>> 81f8adac6879cd4895a7c7df34763583ee28278e
         <li>${key + 1}</li>
         `;
 

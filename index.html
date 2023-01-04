@@ -36,18 +36,85 @@
     <div class="viewBox">
       <div class="imgbox on">
         <img src="./img/main-img/main-view-img01.jpg">
+        <div class="view-text-box">
+          <div class="map-box">
+            <span>
+              VISIT<br>TOKYO
+            </span>
+            <img src="./img/main-img/tokyoMap.svg">
+          </div>
+          <h2>도쿄타워</h2>
+          <p>도쿄의 관광 명소, 상징으로 유명.</p>
+          <div>
+            <a href="./pages/location9.html"><img src="./img/main-img/example.jpg"></a>
+          </div>
+        </div>
       </div>
       <div class="imgbox">
         <img src="./img/main-img/main-view-img02.jpg">
+        <div class="view-text-box">
+
+          <div class="map-box">
+            <span>
+              VISIT<br> CHIBA
+            </span>
+            <img src="./img/main-img/chibaMap.svg">
+          </div>
+          <h2>노미조 폭포, 가메이와 동굴</h2>
+          <p>환상적인 광경을 볼 수 있다고 SNS에서 화제가 된 명소입니다.</p>
+          <div>
+            <a href="./pages/location8.html"><img src="./img/main-img/example.jpg"></a>
+          </div>
+        </div>
       </div>
       <div class="imgbox">
         <img src="./img/main-img/main-view-img03.jpg">
+        <div class="view-text-box">
+          <div class="map-box">
+            <span>
+              VISIT<br>TOYAMA
+            </span>
+            <img src="./img/main-img/toyamaMap.svg">
+          </div>
+          <h2>아이노쿠라 갓쇼즈쿠리 마을</h2>
+          <p>역사적 풍경을 지금도 간직한 이 마을에는 다양한 이야기가 있습니다.</p>
+          <div>
+            <a href="./pages/location13.html"><img src="./img/main-img/example.jpg"></a>
+          </div>
+        </div>
       </div>
       <div class="imgbox">
         <img src="./img/main-img/main-view-img04.jpg">
+        <div class="view-text-box">
+          <div class="map-box">
+            <span>
+              VISIT <br>TOYAMA
+            </span>
+            <img src="./img/main-img/toyamaMap.svg">
+          </div>
+          <h2>쇼가와쿄 유람선</h2>
+          <p>흔들리는 유람선 위에서 절경을 탐미하는 시간은 마음을 해방시켜 줍니다.</p>
+          <div>
+            <a href="./pages/location13.html"><img src="./img/main-img/example.jpg"></a>
+          </div>
+        </div>
       </div>
       <div class="imgbox">
         <img src="./img/main-img/main-view-img05.jpg">
+        <div class="view-text-box">
+          <div class="map-box">
+            <span>
+              VISIT<br>TOHOKU
+            </span>
+            <img src="./img/main-img/tohokuMap.svg">
+          </div>
+          <h2>긴잔 온천</h2>
+          <p>해가 지면 주변을 비추는 가스등이 향수를 불러일으키는 분위기를 자아냅니다.</p>
+          <div>
+            <a href="./pages/location7.html"><img src="./img/main-img/example.jpg"></a>
+
+          </div>
+        </div>
       </div>
     </div>
     <div class="view-content-box">
@@ -66,10 +133,17 @@
     </div>
   </section>
   <main class="content-box">
+    <div class="ex-box">
+      <span>/</span>
+      <p>다른여정</p>
+      <span>/</span>
+    </div>
     <div class="location-name"></div>
     <div class="contents">
     </div>
-    <div class="buttons"></div>
+    <div class="btn-box">
+      <div class="buttons"></div>
+    </div>
   </main>
   <footer>
     <div class="footer-box">
@@ -165,7 +239,7 @@
   <!-- Initialize Swiper -->
   <script>
     let imgIdx = 0;
-    const view = document.querySelectorAll('.swiper-slide');
+
     const viewImg = document.querySelectorAll('.imgbox');
     var swiper = new Swiper(".mySwiper", {
       loop: true,
@@ -175,7 +249,6 @@
       autoplay: {
         delay: 2000,
         disableOnInteraction: false
-
       },
       slidesPerView: 5,
       direction: "vertical",
@@ -188,14 +261,17 @@
       }
     });
     let idx = 0;
+    const view = document.querySelectorAll('.swiper-slide');
     view.forEach((el, key) => {
 
       el.addEventListener('click', () => {
+        console.log(key, "click");
         viewImg[idx].classList.remove('on');
         viewImg[key % 5].classList.add('on');
         idx = key % 5;
+
       })
-    }) 
+    })  
   </script>
 </body>
 

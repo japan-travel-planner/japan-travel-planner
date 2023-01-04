@@ -9,12 +9,10 @@ fetch("../test/data.json")
 
 function init(data) {
   const dataArray = Object.entries(data)
-  /*   console.log(dataArray[1][1].category)
- console.log(dataArray[2])
-   console.log(dataArray[2][1].img[0])
-   console.log(dataArray[2][1].img[1])
-   console.log(pagiNation) */
-
+  console.log(dataArray[0][1]);
+  console.log(dataArray[1][1]);
+  console.log(dataArray[2][1]);
+  console.log(dataArray[3][1]);
   //수정 //
   let category = ['전체'];
 
@@ -35,8 +33,11 @@ function init(data) {
 
   });
   category.forEach(function (el, key) {
+    if(key == 0){
+    locationName.innerHTML += `<button class = "${el} on" > ${el}</button>`
+  }else{
     locationName.innerHTML += `<button class = ${el}> ${el}</button>`
-
+  }
   });
 
 
@@ -49,6 +50,10 @@ function init(data) {
     content.innerHTML = `<a href="../pages/location${id}.html" class="spot${id}">
       <img class="front-img" src="${(dataArray[id - 1][1].img[0].url)}" alt="">
       <img class="front-map" src="${(dataArray[id - 1][1].img[1].url)}" alt="">
+      <div class="location-text-box">
+          <h3>${(dataArray[id - 1][1].category)}</h3>
+          <span>${(dataArray[id - 1][1].place)}</span>
+      </div>
       </a>
       `;
 
@@ -107,12 +112,12 @@ function init(data) {
     };
     const prev = document.createElement("button");
     prev.classList.add("button", "prev");
-    prev.innerHTML = '<div>prev</div>';
+    prev.innerHTML = '<div><img src = "./img/com/leftArrow.svg"></div>';
     prev.addEventListener("click", goPrevPage);
 
     const next = document.createElement("button");
     next.classList.add("button", "next");
-    next.innerHTML = '<div>next</div>';
+    next.innerHTML = '<div><img src = "./img/com/rightArrow.svg"></div>';
     next.addEventListener("click", goNextPage);
 
     buttons.prepend(prev);
@@ -123,32 +128,38 @@ function init(data) {
     if (page + showButton > maxPage) buttons.removeChild(next);
   };
   const render = (page) => {
-      renderContent(page);
-      renderButton(page);
-    
+    renderContent(page);
+    renderButton(page);
+
   };
   render(page);
 
 
-// 지역 버튼을 누르면 해당 지역만 페이지 나오게
+  // 지역 버튼을 누르면 해당 지역만 페이지 나오게
   const locationBtn = document.querySelectorAll('.location-name>button');
+  let btnIdx = 0;
   locationBtn.forEach((el, key) => {
     el.addEventListener('click', () => {
       buttons.classList.add('on'); // 버튼 안보이게 하기 
+      locationBtn[btnIdx].classList.remove('on');
+      el.classList.add('on');
+      btnIdx = key
+      /* console.log(el.className.splice(el.className.indexOf('on'),2)); */
       while (contents.hasChildNodes()) {
         contents.removeChild(contents.lastChild);
       }
       let count = 0;
-      let test = [];
-      categoryPage = el.className;
+      let locationKey = [];
+      categoryPage = el.className.split(" ");
+      console.log(categoryPage);
       dataArray.forEach((el, key) => {
-        if (el[1].category == categoryPage) {
-          test.push(key)
+        if (el[1].category == categoryPage[0]) {
+          locationKey.push(key)
           count++;
         }
       })
       // 지역 버튼이 전체이면 페이지 전체 보이고 버튼 보이게
-      if (categoryPage == '전체') {
+      if (categoryPage[0] == '전체') {
         buttons.classList.remove('on');
         render(page);
       }
@@ -157,9 +168,13 @@ function init(data) {
         for (let i = 0; i < count; i++) {
           const content = document.createElement("div");
           content.classList.add("content");
-          content.innerHTML = `<a href="../pages/location${test[i]+1}.html" class="">
-      <img class="front-img" src="${(dataArray[test[i]][1].img[0].url)}" alt="">
-      <img class="front-map" src="${(dataArray[test[i]][1].img[1].url)}" alt="">
+          content.innerHTML = `<a href="../pages/location${locationKey[i] + 1}.html" class="">
+      <img class="front-img" src="${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
+      <img class="front-map" src="${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
+      <div class="location-text-box">
+      <h3>${(dataArray[i][1].category)}</h3>
+      <span>${(dataArray[i][1].place)}</span>
+      </div>
       </a>
       `;
           contents.appendChild(content)
