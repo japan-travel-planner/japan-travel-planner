@@ -45,6 +45,7 @@ function init(data) {
 
 
 
+
   const makeContent = (id) => {
     const content = document.createElement("div");
     content.classList.add("content");
