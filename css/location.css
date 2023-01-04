@@ -34,49 +34,6 @@ body {
   color: #fff;
 }
 
-<<<<<<< HEAD
-=======
-/*  header  */
-header {
-  width: 1300px;
-  height: 100px;
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.header-box {
-  max-width: 1300px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #fff;
-  box-sizing: border-box;
-}
-
-.logo {
-  width: 20%;
-  margin: 27px 0;
-}
-
-.icon-box {
-  width: 20%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.icon-box > div {
-  margin: 0 7px;
-}
-
-.icon-box > div > a > p {
-  color: #fff;
-}
->>>>>>> 2d0a43a7f9ceb3c32e0538f09cbd4b0aa73fd7ab
 /* 메인 */
 .main-pagination {
   position: absolute;

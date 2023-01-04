@@ -49,12 +49,7 @@ function init(data) {
   const makeContent = (id) => {
     const content = document.createElement("div");
     content.classList.add("content");
-<<<<<<< HEAD
     content.innerHTML = `<a href="../pages/location1.html?local=location${id}" class="spot${id}">
-=======
-    console.log(id)
-    content.innerHTML = `<a href="./pages/location${id}.html" class="spot${id}">
->>>>>>> 2d0a43a7f9ceb3c32e0538f09cbd4b0aa73fd7ab
       <img class="front-img" src="${(dataArray[id - 1][1].img[0].url)}" alt="">
       <img class="front-map" src="${(dataArray[id - 1][1].img[1].url)}" alt="">
       <div class="location-text-box">
@@ -177,12 +172,8 @@ function init(data) {
           
           const content = document.createElement("div");
           content.classList.add("content");
-<<<<<<< HEAD
           
           content.innerHTML = `<a href="../pages/location1.html?local=location${locationKey[i]+1}" class="">
-=======
-          content.innerHTML = `<a href="./pages/location${locationKey[i] + 1}.html" class="">
->>>>>>> 2d0a43a7f9ceb3c32e0538f09cbd4b0aa73fd7ab
       <img class="front-img" src="${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
       <img class="front-map" src="${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
       <div class="location-text-box">

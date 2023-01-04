@@ -22,7 +22,6 @@ fetch("../test/data.json")
     const locaData = Object.keys(data),
       mainPages = document.querySelector(".main-pagination");
     // console.log(locaData);
-<<<<<<< HEAD
     locaData.forEach(function (el, key) {
       // console.log(el,key)
       /* mainPages.innerHTML += `<a href="./location${key + 1}.html">sub${key + 1
@@ -30,13 +29,6 @@ fetch("../test/data.json")
         mainPages.innerHTML += `<a href="./location1.html?local=location${key + 1}">sub${key + 1
         }</a>`
     });
-=======
-    // locaData.forEach(function (el, key) {
-    //   // console.log(el,key)
-    //   mainPages.innerHTML += `<a href="./location${key + 1}.html">sub${key + 1
-    //     }</a>`;
-    // });
->>>>>>> 2d0a43a7f9ceb3c32e0538f09cbd4b0aa73fd7ab
   });
 
 // console.log(window.location.href);
