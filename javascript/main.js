@@ -26,19 +26,21 @@ function init(data) {
   let page = 1;
   let categoryPage = '전체';
   //지역 리스트//
-  dataArray.forEach(function (el, key) {
-    if (!category.includes(el[1].category)) {
-      category.push(el[1].category)
-    }
+  window.addEventListener('load', () => {
+    dataArray.forEach(function (el, key) {
+      if (!category.includes(el[1].category)) {
+        category.push(el[1].category)
+      }
 
-  });
-  category.forEach(function (el, key) {
-    if(key == 0){
-    locationName.innerHTML += `<button class = "${el} on" > ${el}</button>`
-  }else{
-    locationName.innerHTML += `<button class = ${el}> ${el}</button>`
-  }
-  });
+    });
+    category.forEach(function (el, key) {
+      if (key == 0) {
+        locationName.innerHTML += `<button class = "${el} on" > ${el}</button>`
+      } else {
+        locationName.innerHTML += `<button class = ${el}> ${el}</button>`
+      }
+    });
+  })
 
 
 
