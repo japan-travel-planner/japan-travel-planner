@@ -50,7 +50,7 @@ function init(data) {
     const content = document.createElement("div");
     content.classList.add("content");
     console.log(id)
-    content.innerHTML = `<a href="../pages/location${id}.html" class="spot${id}">
+    content.innerHTML = `<a href="./pages/location${id}.html" class="spot${id}">
       <img class="front-img" src="${(dataArray[id - 1][1].img[0].url)}" alt="">
       <img class="front-map" src="${(dataArray[id - 1][1].img[1].url)}" alt="">
       <div class="location-text-box">
@@ -171,7 +171,7 @@ function init(data) {
         for (let i = 0; i < count; i++) {
           const content = document.createElement("div");
           content.classList.add("content");
-          content.innerHTML = `<a href="../pages/location${locationKey[i] + 1}.html" class="">
+          content.innerHTML = `<a href="./pages/location${locationKey[i] + 1}.html" class="">
       <img class="front-img" src="${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
       <img class="front-map" src="${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
       <div class="location-text-box">
