@@ -64,7 +64,7 @@ function init(location) {
     <img src="${location.spot[key].img[0].url}" alt="">
     `;
     const nail = document.querySelectorAll(".spot_sub");
-    
+
     for (let i = 0; i < location.spot[0].img.length; i++) {
       nail[key].innerHTML += `
       <img src="${location.spot[key].img[i].url}" alt="">
