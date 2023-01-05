@@ -14,7 +14,7 @@ function init(data) {
 
   const locationName = document.querySelector('.location-name'),
     buttons = document.querySelector('.buttons'),
-    contents = document.querySelector(".contents"),
+    locationContents = document.querySelector(".content-box .contents"),
     numOfContent = dataArray.length,
     showContent = 4,
     showButton = 5,
@@ -71,12 +71,12 @@ function init(data) {
 
   const renderContent = (page) => {
     // 목록 리스트 초기화
-    while (contents.hasChildNodes()) {
-      contents.removeChild(contents.lastChild);
+    while (locationContents.hasChildNodes()) {
+      locationContents.removeChild(locationContents.lastChild);
     }
     // 글의 최대 개수를 넘지 않는 선에서, 화면에 최대 10개의 글 생성
     for (let id = (page - 1) * showContent + 1; id <= page * showContent && id <= numOfContent; id++) {
-      contents.appendChild(makeContent(id));
+      locationContents.appendChild(makeContent(id));
     }
   };
   const renderButton = (page) => {
@@ -133,8 +133,8 @@ function init(data) {
       locationBtn[btnIdx].classList.remove('on');
       el.classList.add('on');
       btnIdx = key;
-      while (contents.hasChildNodes()) {
-        contents.removeChild(contents.lastChild);
+      while (locationContents.hasChildNodes()) {
+        locationContents.removeChild(locationContents.lastChild);
       }
       let count = 0;
       let locationKey = [];
@@ -167,7 +167,7 @@ function init(data) {
       </div>
       </a>
       `;
-          contents.appendChild(content)
+      locationContents.appendChild(content)
         }
       }
     })
