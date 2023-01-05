@@ -10,12 +10,13 @@ fetch("../test/data.json")
     const result = url.match(regex);
     const urlParams = new URL(location.href).searchParams;
     const name = urlParams.get('local');
-    
-    init(data[name] ,data);
+
+    init(data[name], data);
   });
 
-function init(location,data) {
-  locationbox(data);
+function init(location, data) {
+
+
   mainTop.innerHTML += `
   <div class="post-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),url('${location.post}')";></div>
     <article class="line01">
@@ -78,91 +79,94 @@ function init(location,data) {
         `;
 
   });
+  $(document).ready(function () {
+    locationbox(data);
     sideBar();
-    thum();
-  
+  })
+  thum();
+
 }
 const contents = document.querySelector(".contents"),
   mainTop = document.querySelector(".main-top"),
   contentText = document.querySelector('.content-text');
 //================================ 우측사이드바============================
 function sideBar() {
- 
-    // 각 컨텐츠를 Section으로 정했을 때 사이드 바 클릭시 해당 컨텐츠로 이동 해당 컨텐츠 위치 확인
-    const elSection = document.querySelectorAll("main > section"),
-      elSidebarBtn = document.querySelectorAll(".sidebar > ul >li");
-    //console.log(elSection + '리스트');
-    let idx = 0;
-    let pos = { y: 0, y2: 0, state: true };
-    let play;
-    let start = 0;
-    let startBtn = 0;
-    let sectionArry = []; // 각 컨텐츠의 offsetTop 값
-    let btnIdx = 0;
-    elSidebarBtn.forEach((el, key) => {
-      el.addEventListener("click", () => {
-        //가는길 다 표시
-        /* for (let i = 0; i < elSidebarBtn.length; i++) {
-            elSidebarBtn[i].classList.remove('on')
-        }
-        for (let i = 0; i < key + 1; i++) {
-            elSidebarBtn[i].classList.add('on')
-        } */
-        // 지금있는곳만 표시
-        elSidebarBtn[idx].classList.remove("on");
-        el.classList.add("on");
-        idx = key;
-        scrollTo(0, elSection[key].offsetTop - elSection[idx].clientHeight / 4);
-      });
-    });
 
-    //스크롤 이벤트 시 페이지네이션 이벤트
-    window.addEventListener("scroll", function () {
-      // 스크롤 up ,down  확인
-      pos.y = window.pageYOffset;
-      pos.state = pos.y > pos.y2 ? true : false;
-      clearTimeout(play);
-      pos.y2 = pos.y;
-      play = setTimeout(function () {
-        elSection.forEach((el, key) => {
-          // console.log(el.clientHeight);
-          // 스크롤 down 일 시 sectionArry에 각 컨텐츠의 offsetTop 저장
-          // sectionArry의 length값으로 각 컨텐츠의 위치를 찾고 찾은 위치 페이지네이션에 class Add
-          if (pos.state) {
-            if (
-              window.pageYOffset >=
-              elSection[key].offsetTop - el.clientHeight / 2
-            ) {
-              if (!sectionArry.includes(elSection[key].offsetTop)) {
-                sectionArry.push(elSection[key].offsetTop);
-              }
-              start = key;
-              elSidebarBtn[btnIdx].classList.remove("on");
-              elSidebarBtn[sectionArry.length - 1].classList.add("on");
-              btnIdx = sectionArry.length - 1;
-            }
-          }
-          // 스크롤 up 일 시 sectionArry에 각 컨텐츠의 offsetTop 삭제
-          // sectionArry의 length값으로 각 컨텐츠의 위치를 찾고 찾은 위치 페이지네이션에 class remove
-          else {
-            if (
-              window.pageYOffset + elSection[start].offsetHeight <
-              elSection[start].offsetTop - el.clientHeight * 0.95
-            )
-              if (sectionArry.indexOf(elSection[start].offsetTop) != -1) {
-                if (start > 0) {
-                  elSidebarBtn[sectionArry.length - 1].classList.remove("on");
-                  sectionArry.splice(
-                    sectionArry.indexOf(elSection[start].offsetTop)
-                  );
-                  start--;
-                  elSidebarBtn[sectionArry.length - 1].classList.add("on");
-                }
-              }
-          }
-        });
-      }, 100);
+  // 각 컨텐츠를 Section으로 정했을 때 사이드 바 클릭시 해당 컨텐츠로 이동 해당 컨텐츠 위치 확인
+  const elSection = document.querySelectorAll("main > section"),
+    elSidebarBtn = document.querySelectorAll(".sidebar > ul >li");
+  //console.log(elSection + '리스트');
+  let idx = 0;
+  let pos = { y: 0, y2: 0, state: true };
+  let play;
+  let start = 0;
+  let startBtn = 0;
+  let sectionArry = []; // 각 컨텐츠의 offsetTop 값
+  let btnIdx = 0;
+  elSidebarBtn.forEach((el, key) => {
+    el.addEventListener("click", () => {
+      //가는길 다 표시
+      /* for (let i = 0; i < elSidebarBtn.length; i++) {
+          elSidebarBtn[i].classList.remove('on')
+      }
+      for (let i = 0; i < key + 1; i++) {
+          elSidebarBtn[i].classList.add('on')
+      } */
+      // 지금있는곳만 표시
+      elSidebarBtn[idx].classList.remove("on");
+      el.classList.add("on");
+      idx = key;
+      scrollTo(0, elSection[key].offsetTop - elSection[idx].clientHeight / 4);
     });
+  });
+
+  //스크롤 이벤트 시 페이지네이션 이벤트
+  window.addEventListener("scroll", function () {
+    // 스크롤 up ,down  확인
+    pos.y = window.pageYOffset;
+    pos.state = pos.y > pos.y2 ? true : false;
+    clearTimeout(play);
+    pos.y2 = pos.y;
+    play = setTimeout(function () {
+      elSection.forEach((el, key) => {
+        // console.log(el.clientHeight);
+        // 스크롤 down 일 시 sectionArry에 각 컨텐츠의 offsetTop 저장
+        // sectionArry의 length값으로 각 컨텐츠의 위치를 찾고 찾은 위치 페이지네이션에 class Add
+        if (pos.state) {
+          if (
+            window.pageYOffset >=
+            elSection[key].offsetTop - el.clientHeight / 2
+          ) {
+            if (!sectionArry.includes(elSection[key].offsetTop)) {
+              sectionArry.push(elSection[key].offsetTop);
+            }
+            start = key;
+            elSidebarBtn[btnIdx].classList.remove("on");
+            elSidebarBtn[sectionArry.length - 1].classList.add("on");
+            btnIdx = sectionArry.length - 1;
+          }
+        }
+        // 스크롤 up 일 시 sectionArry에 각 컨텐츠의 offsetTop 삭제
+        // sectionArry의 length값으로 각 컨텐츠의 위치를 찾고 찾은 위치 페이지네이션에 class remove
+        else {
+          if (
+            window.pageYOffset + elSection[start].offsetHeight <
+            elSection[start].offsetTop - el.clientHeight * 0.95
+          )
+            if (sectionArry.indexOf(elSection[start].offsetTop) != -1) {
+              if (start > 0) {
+                elSidebarBtn[sectionArry.length - 1].classList.remove("on");
+                sectionArry.splice(
+                  sectionArry.indexOf(elSection[start].offsetTop)
+                );
+                start--;
+                elSidebarBtn[sectionArry.length - 1].classList.add("on");
+              }
+            }
+        }
+      });
+    }, 100);
+  });
 
 
 }
@@ -177,43 +181,43 @@ window.addEventListener("scroll", () => {
   }
 });
 
-function thum(){
-//======================썸네일 이미지 클릭시 메인이미지 변경==================
-const spotZone = document.querySelectorAll('.content-zone'),
-spotMainImg = document.querySelectorAll('.spot_main > img'),
-spotSubImg = document.querySelectorAll('.content-zone > .spot_sub');
-// let key = 3;
-//=================잘되는거 보존==========
-// spotSubImg.forEach(function (el, key) {
-//   spotSubImg[key].addEventListener('click', () => {
+function thum() {
+  //======================썸네일 이미지 클릭시 메인이미지 변경==================
+  const spotZone = document.querySelectorAll('.content-zone'),
+    spotMainImg = document.querySelectorAll('.spot_main > img'),
+    spotSubImg = document.querySelectorAll('.content-zone > .spot_sub');
+  // let key = 3;
+  //=================잘되는거 보존==========
+  // spotSubImg.forEach(function (el, key) {
+  //   spotSubImg[key].addEventListener('click', () => {
 
-//     spotImgbox = spotSubImg[key].querySelectorAll('img');
+  //     spotImgbox = spotSubImg[key].querySelectorAll('img');
 
-//     spotImgbox.forEach(function (el, key) {
-//       console.log(spotImgbox[key], 'img')
-//       spotMainImg[0].src = spotImgbox[key].src
-//     })
+  //     spotImgbox.forEach(function (el, key) {
+  //       console.log(spotImgbox[key], 'img')
+  //       spotMainImg[0].src = spotImgbox[key].src
+  //     })
 
-//     console.log(el, 'el')
-//     console.log(key)
+  //     console.log(el, 'el')
+  //     console.log(key)
 
-//     console.log(spotMainImg[key].src)
-//     spotMainImg[0].src = `${spotMainImg[key].src}`
-//   })
-// })
-// ========================수정 =======================
-spotSubImg.forEach(function (el, key) {
-const spotImgbox = spotSubImg[key].querySelectorAll('img');
-spotImgbox.forEach(function (img, ikey) {
-  img.addEventListener('click', () => {
-    console.log(ikey, "ikey")
-    spotMainImg[key].src = `${spotImgbox[ikey].src}`
+  //     console.log(spotMainImg[key].src)
+  //     spotMainImg[0].src = `${spotMainImg[key].src}`
+  //   })
+  // })
+  // ========================수정 =======================
+  spotSubImg.forEach(function (el, key) {
+    const spotImgbox = spotSubImg[key].querySelectorAll('img');
+    spotImgbox.forEach(function (img, ikey) {
+      img.addEventListener('click', () => {
+        console.log(ikey, "ikey")
+        spotMainImg[key].src = `${spotImgbox[ikey].src}`
+      })
+    })
   })
-})
-})
 
 }
-function locationbox(data){
+function locationbox(data) {
   const dataArray = Object.entries(data)
   //다른여정 js//
   let category = ['전체'];
@@ -275,7 +279,7 @@ function locationbox(data){
           const content = document.createElement("div");
           content.classList.add("content");
 
-          content.innerHTML = `<a href="./pages/location.html?local=location${locationKey[i] + 1}" class="">
+          content.innerHTML = `<a href="./location.html?local=location${locationKey[i] + 1}" class="">
         <img class="front-img" src=".${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
         <img class="front-map" src=".${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
         <div class="location-text-box">
@@ -284,7 +288,7 @@ function locationbox(data){
         </div>
         </a>
         `;
-        secContents.appendChild(content)
+          secContents.appendChild(content)
         }
       }
     })
@@ -292,7 +296,7 @@ function locationbox(data){
   const makeContent = (id) => {
     const content = document.createElement("div");
     content.classList.add("content");
-    content.innerHTML = `<a href="./pages/location.html?local=location${id}" class="spot${id}">
+    content.innerHTML = `<a href="./location.html?local=location${id}" class="spot${id}">
       <img class="front-img" src=".${(dataArray[id - 1][1].img[0].url)}" alt="">
       <img class="front-map" src=".${(dataArray[id - 1][1].img[1].url)}" alt="">
       <div class="location-text-box">
