@@ -5,28 +5,21 @@ fetch("../test/data.json")
   .then(function (data) {
     const regex = /(?:\/pages)\/(location\d{1,2})/;
     const url = window.location.href;
-    // console.log(url);
+    
     url.match(regex);
     const result = url.match(regex);
     const urlParams = new URL(location.href).searchParams;
     const name = urlParams.get('local');
-    // console.log(url.match(regex));
-    // console.log(result[1]);
-    const links = result[1];
-    console.log(data[name]);
-    console.log(data[links]);
-    /* init(data[links]); */
-    init(data[name]);
-    // init(data.location2);
- 
+    const locationHash =String(window.location.hash).substring(1);
+    init(data[locationHash]);
     const locaData = Object.keys(data),
       mainPages = document.querySelector(".main-pagination");
-    // console.log(locaData);
+    
     locaData.forEach(function (el, key) {
       // console.log(el,key)
       /* mainPages.innerHTML += `<a href="./location${key + 1}.html">sub${key + 1
         }</a>`; */
-        mainPages.innerHTML += `<a href="./location1.html?local=location${key + 1}">sub${key + 1
+        mainPages.innerHTML += `<a href="./location1.html?local=location${key + 1}#location${key + 1}">sub${key + 1
         }</a>`
     });
   });

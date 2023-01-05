@@ -6,6 +6,7 @@ a {
 * {
   color: #fff;
 }
+
 /* 메인 시작 */
 .main-top {
   margin: 0 auto;
@@ -13,9 +14,11 @@ a {
   z-index: 1;
   overflow: hidden;
 }
+
 .viewBox {
   height: 1080px;
 }
+
 .viewBox::before {
   z-index: 999;
   content: "";
@@ -27,6 +30,7 @@ a {
   display: block;
   background: linear-gradient(360deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
 }
+
 .viewBox::after {
   content: "";
   display: block;
@@ -38,7 +42,7 @@ a {
   transform: translateY(-200%);
 }
 
-.viewBox > .imgbox {
+.viewBox>.imgbox {
   width: 100%;
 
   position: absolute;
@@ -50,12 +54,14 @@ a {
 .imgbox.on {
   opacity: 1;
 }
-.viewBox > .imgbox > img {
+
+.viewBox>.imgbox>img {
   position: relative;
   width: 100%;
   height: 1080px;
   filter: brightness(90%);
 }
+
 .view-content-box {
   position: absolute;
   bottom: 0;
@@ -83,7 +89,7 @@ a {
   color: #fff;
 }
 
-.view-text-box > .map-box {
+.view-text-box>.map-box {
   position: relative;
   margin-bottom: 100px;
   display: flex;
@@ -91,34 +97,39 @@ a {
   height: 200px;
 }
 
-.view-text-box > .map-box > span {
+.view-text-box>.map-box>span {
   font-size: 100px;
   font-weight: bold;
 }
 
-.view-text-box > .map-box > img {
+.view-text-box>.map-box>img {
   width: 200px;
   transform: translate(-10%, 10%);
 }
 
-.view-text-box > h2 {
+.view-text-box>h2 {
   font-size: 40px;
   margin-bottom: 30px;
   font-weight: 600;
 }
 
-.view-text-box > p {
+.view-text-box>p {
   font-size: 28px;
   font-weight: 400;
 }
 
-.view-text-box > div {
+.view-text-box>div {
   margin: 30px 30px 30px 0px;
   width: 139px;
   height: 52px;
-
-  /*  background-color: #fff; */
 }
+
+.view-text-box>div>a {
+  display: block;
+}
+
+/*  background-color: #fff; */
+
 
 /* 슬라이드 시작 */
 .swiper {
@@ -132,7 +143,7 @@ a {
   text-align: end;
 }
 
-.swiper > .swiper-wrapper > .swiper-slide {
+.swiper>.swiper-wrapper>.swiper-slide {
   width: 50px;
   height: 30px;
   cursor: pointer;
@@ -140,7 +151,8 @@ a {
   font-weight: bold;
   font-size: 24px;
 }
-.swiper > .swiper-wrapper > .swiper-slide-active {
+
+.swiper>.swiper-wrapper>.swiper-slide-active {
   color: #fff;
   font-size: 28px;
 }
@@ -152,7 +164,8 @@ a {
   justify-content: end;
   width: 1300px;
 }
-.location-name > button {
+
+.location-name>button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -169,14 +182,16 @@ a {
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
 }
-.location-name > button.on {
+
+.location-name>button.on {
   color: #fff;
 }
 
-.location-name > button:nth-last-child(1) {
+.location-name>button:nth-last-child(1) {
   padding-right: 0;
 }
-.location-name > button::after {
+
+.location-name>button::after {
   content: "";
   display: block;
   width: 1px;
@@ -187,9 +202,10 @@ a {
   right: 0;
 }
 
-.location-name > button:nth-last-child(1)::after {
+.location-name>button:nth-last-child(1)::after {
   border: none;
 }
+
 .content-box {
   background-color: #192229;
   display: flex;
@@ -197,24 +213,25 @@ a {
   align-items: center;
   position: relative;
 }
-.content-box > .ex-box {
+
+.content-box>.ex-box {
   text-align: center;
   margin: 100px 0;
 }
 
-.content-box > .ex-box > p {
+.content-box>.ex-box>p {
   font-size: 38px;
   color: #fff;
   margin: 10px 0;
 }
 
-.content-box > .ex-box > span {
+.content-box>.ex-box>span {
   font-size: 38px;
   color: #fff;
   line-height: 46%;
 }
 
-.content-box > .ex-box > span:nth-child(1) {
+.content-box>.ex-box>span:nth-child(1) {
   transform: translateX(10%);
 }
 
@@ -232,10 +249,12 @@ a {
   display: flex;
   justify-content: space-around;
 }
+
 .content {
   position: relative;
 }
-.content > a img {
+
+.content>a img {
   width: 320px;
   height: 430px;
 
@@ -243,6 +262,7 @@ a {
 
   border-radius: 2px;
 }
+
 .location-text-box {
   width: 100%;
   height: 70px;
@@ -252,15 +272,18 @@ a {
   text-align: center;
   /* background-color: rgba(0, 0, 0, 0.2); */
 }
-.location-text-box > h3 {
+
+.location-text-box>h3 {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 8px;
 }
-.location-text-box > span {
+
+.location-text-box>span {
   font-size: 18px;
   font-weight: 400;
 }
+
 .contents a {
   position: relative;
 }
@@ -273,6 +296,7 @@ a {
   opacity: 0;
   /* display: none; */
 }
+
 .btn-box {
   width: 100%;
   height: 100px;
@@ -284,6 +308,7 @@ a {
   display: inline-flex;
   justify-content: center;
 }
+
 .buttons.on {
   display: none;
 }
@@ -297,19 +322,23 @@ a {
   outline: 0;
   cursor: pointer;
 }
-.buttons>.prev{
-    padding : 0;
-    width: 42px;
-}
-.buttons>.next{
-    padding : 0;
-    width: 42px;
-}
-.buttons img{
-    width: 100%;
+
+.buttons>.prev {
+  padding: 0;
+  width: 42px;
 }
 
-.buttons>.active{
-    color: #fff;
+.buttons>.next {
+  padding: 0;
+  width: 42px;
 }
+
+.buttons img {
+  width: 100%;
+}
+
+.buttons>.active {
+  color: #fff;
+}
+
 /* 다른여정 끝  */
