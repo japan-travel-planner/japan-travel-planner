@@ -10,8 +10,8 @@ fetch("../test/data.json")
     const result = url.match(regex);
     const urlParams = new URL(location.href).searchParams;
     const name = urlParams.get('local');
-    const locationHash =String(window.location.hash).substring(1);
-    init(data[locationHash]);
+    /* const locationHash =String(window.location.hash).substring(1); */
+    init(data[name]);
     const locaData = Object.keys(data),
       mainPages = document.querySelector(".main-pagination");
     
