@@ -241,3 +241,192 @@ body {
 .trail-cont:nth-child(1) {
   height: 250px;
 }
+
+/* 다른여정시작 */
+section.content-box .location-name {
+  display: flex;
+  justify-content: end;
+  width: 1300px;
+}
+
+section.content-box .location-name>button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 0.5rem;
+  position: relative;
+  font-family: "Noto Sans KR";
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+section.content-box .location-name>button.on {
+  color: #fff;
+}
+
+section.content-box .location-name>button:nth-last-child(1) {
+  padding-right: 0;
+}
+
+section.content-box .location-name>button::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 1rem;
+  border-left: 1px solid #e2e1e1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+section.content-box .location-name>button:nth-last-child(1)::after {
+  border: none;
+}
+
+section.content-box {
+  background-color: #192229;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+section.content-box>.ex-box {
+  text-align: center;
+  margin: 100px 0;
+}
+
+section.content-box>.ex-box>p {
+  font-size: 38px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+section.content-box>.ex-box>span {
+  font-size: 38px;
+  color: #fff;
+  line-height: 46%;
+}
+
+section.content-box>.ex-box>span:nth-child(1) {
+  transform: translateX(10%);
+}
+
+
+section.content-box .content {
+  display: flex;
+  padding: 0.3em 0;
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 50px;
+  position: relative;
+}
+section.content-box .content:hover>a>.front-map{
+  left: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+section.content-box .contents .front-map {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 1s;
+  /* display: none; */
+}
+section.content-box .contents {
+  width: 1300px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+section.content-box .content>a img {
+  width: 320px;
+  height: 430px;
+
+  filter: brightness(80%);
+
+  border-radius: 2px;
+}
+
+section.content-box .location-text-box {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+section.content-box .location-text-box>h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+section.content-box .location-text-box>span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+section.content-box .contents a {
+  position: relative;
+}
+
+
+
+section.content-box .btn-box {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+section.content-box .buttons {
+  padding: 1rem 0;
+  display: inline-flex;
+  justify-content: center;
+}
+
+section.content-box .buttons.on {
+  display: none;
+}
+
+section.content-box .button {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+section.content-box .buttons>.prev {
+  padding: 0;
+  width: 42px;
+}
+
+section.content-box .buttons>.next {
+  padding: 0;
+  width: 42px;
+}
+
+section.content-box .buttons img {
+  width: 100%;
+}
+
+section.content-box .buttons>.active {
+  color: #fff;
+}

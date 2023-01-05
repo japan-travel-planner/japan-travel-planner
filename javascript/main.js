@@ -9,7 +9,7 @@ fetch("./test/data.json")
 
 function init(data) {
   const dataArray = Object.entries(data)
-  //수정 //
+  //다른여정 js//
   let category = ['전체'];
 
   const locationName = document.querySelector('.location-name'),
@@ -22,21 +22,69 @@ function init(data) {
   let page = 1;
   let categoryPage = '전체';
   //지역 리스트//
-  window.addEventListener('load', () => {
-    dataArray.forEach(function (el, key) {
-      if (!category.includes(el[1].category)) {
-        category.push(el[1].category)
-      }
+  dataArray.forEach(function (el, key) {
+    if (!category.includes(el[1].category)) {
+      category.push(el[1].category)
+    }
 
-    });
-    category.forEach(function (el, key) {
-      if (key == 0) {
-        locationName.innerHTML += `<button class = "${el} on" > ${el}</button>`
-      } else {
-        locationName.innerHTML += `<button class = ${el}> ${el}</button>`
+  });
+  category.forEach(function (el, key) {
+    if (key == 0) {
+      locationName.innerHTML += `<button class = "${el} on" > ${el}</button>`
+    } else {
+      locationName.innerHTML += `<button class = ${el}> ${el}</button>`
+    }
+  });
+  // 지역 버튼을 누르면 해당 지역만 페이지 나오게
+  const locationBtn = document.querySelectorAll('.location-name > button');
+  let btnIdx = 0;
+  locationBtn.forEach((el, key) => {
+    el.addEventListener('click', () => {
+      buttons.classList.add('on'); // 버튼 안보이게 하기 
+      locationBtn[btnIdx].classList.remove('on');
+      el.classList.add('on');
+      btnIdx = key;
+      while (contents.hasChildNodes()) {
+        contents.removeChild(contents.lastChild);
       }
-    });
+      let count = 0;
+      let locationKey = [];
+      categoryPage = el.className.split(" ");
+      dataArray.forEach((el, key) => {
+        if (el[1].category == categoryPage[0]) {
+          locationKey.push(key)
+          count++;
+        }
+      })
+
+      // 지역 버튼이 전체이면 페이지 전체 보이고 버튼 보이게
+      if (categoryPage[0] == '전체') {
+        buttons.classList.remove('on');
+        render(page);
+      }
+      // 해당 지역 컨텐츠만 나오게
+      else {
+        for (let i = 0; i < count; i++) {
+
+          const content = document.createElement("div");
+          content.classList.add("content");
+
+          content.innerHTML = `<a href="./pages/location.html?local=location${locationKey[i] + 1}" class="">
+        <img class="front-img" src="${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
+        <img class="front-map" src="${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
+        <div class="location-text-box">
+        <h3>${(dataArray[locationKey[i]][1].category)}</h3>
+        <span>${(dataArray[locationKey[i]][1].place)}</span>
+        </div>
+        </a>
+        `;
+          contents.appendChild(content)
+        }
+      }
+    })
   })
+
+
 
   const makeContent = (id) => {
     const content = document.createElement("div");
@@ -123,55 +171,55 @@ function init(data) {
   };
   render(page);
 
-  // 지역 버튼을 누르면 해당 지역만 페이지 나오게
-  window.onload = ()=>{
-  const locationBtn = document.querySelectorAll('.location-name > button');
-  let btnIdx = 0;
-  locationBtn.forEach((el, key) => {
-    el.addEventListener('click', () => {
-      buttons.classList.add('on'); // 버튼 안보이게 하기 
-      locationBtn[btnIdx].classList.remove('on');
-      el.classList.add('on');
-      btnIdx = key;
-      while (contents.hasChildNodes()) {
-        contents.removeChild(contents.lastChild);
-      }
-      let count = 0;
-      let locationKey = [];
-      categoryPage = el.className.split(" ");
-      dataArray.forEach((el, key) => {
-        if (el[1].category == categoryPage[0]) {
-          locationKey.push(key)
-          count++;
+  /*   // 지역 버튼을 누르면 해당 지역만 페이지 나오게
+    window.onload = ()=>{
+    const locationBtn = document.querySelectorAll('.location-name > button');
+    let btnIdx = 0;
+    locationBtn.forEach((el, key) => {
+      el.addEventListener('click', () => {
+        buttons.classList.add('on'); // 버튼 안보이게 하기 
+        locationBtn[btnIdx].classList.remove('on');
+        el.classList.add('on');
+        btnIdx = key;
+        while (contents.hasChildNodes()) {
+          contents.removeChild(contents.lastChild);
+        }
+        let count = 0;
+        let locationKey = [];
+        categoryPage = el.className.split(" ");
+        dataArray.forEach((el, key) => {
+          if (el[1].category == categoryPage[0]) {
+            locationKey.push(key)
+            count++;
+          }
+        })
+        
+        // 지역 버튼이 전체이면 페이지 전체 보이고 버튼 보이게
+        if (categoryPage[0] == '전체') {
+          buttons.classList.remove('on');
+          render(page);
+        }
+        // 해당 지역 컨텐츠만 나오게
+        else {
+          for (let i = 0; i < count; i++) {
+            
+            const content = document.createElement("div");
+            content.classList.add("content");
+            
+            content.innerHTML = `<a href="./pages/location.html?local=location${locationKey[i]+1}}" class="">
+        <img class="front-img" src="${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
+        <img class="front-map" src="${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
+        <div class="location-text-box">
+        <h3>${(dataArray[locationKey[i]][1].category)}</h3>
+        <span>${(dataArray[locationKey[i]][1].place)}</span>
+        </div>
+        </a>
+        `;
+            contents.appendChild(content)
+          }
         }
       })
-      
-      // 지역 버튼이 전체이면 페이지 전체 보이고 버튼 보이게
-      if (categoryPage[0] == '전체') {
-        buttons.classList.remove('on');
-        render(page);
-      }
-      // 해당 지역 컨텐츠만 나오게
-      else {
-        for (let i = 0; i < count; i++) {
-          
-          const content = document.createElement("div");
-          content.classList.add("content");
-          
-          content.innerHTML = `<a href="./pages/location.html?local=location${locationKey[i]+1}}" class="">
-      <img class="front-img" src="${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
-      <img class="front-map" src="${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
-      <div class="location-text-box">
-      <h3>${(dataArray[locationKey[i]][1].category)}</h3>
-      <span>${(dataArray[locationKey[i]][1].place)}</span>
-      </div>
-      </a>
-      `;
-          contents.appendChild(content)
-        }
-      }
     })
-  })
-}
+  } */
 
 }
