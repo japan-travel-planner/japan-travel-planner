@@ -10,10 +10,12 @@ fetch("../test/data.json")
     const result = url.match(regex);
     const urlParams = new URL(location.href).searchParams;
     const name = urlParams.get('local');
-    console.log(data);
-    init(data[name], data);
+    
+    init(data[name] ,data);
   });
-function init(location, data) {
+
+function init(location,data) {
+  locationbox(data);
   mainTop.innerHTML += `
   <div class="post-img" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),url('${location.post}')";></div>
     <article class="line01">
@@ -76,17 +78,19 @@ function init(location, data) {
         `;
 
   });
-  sideBar();
+    sideBar();
+    thum();
+  
 }
 const contents = document.querySelector(".contents"),
   mainTop = document.querySelector(".main-top"),
   contentText = document.querySelector('.content-text');
 //================================ 우측사이드바============================
 function sideBar() {
-  window.addEventListener("load", () => {
+ 
     // 각 컨텐츠를 Section으로 정했을 때 사이드 바 클릭시 해당 컨텐츠로 이동 해당 컨텐츠 위치 확인
-    (elSection = document.querySelectorAll("main > section")),
-      (elSidebarBtn = document.querySelectorAll(".sidebar > ul >li"));
+    const elSection = document.querySelectorAll("main > section"),
+      elSidebarBtn = document.querySelectorAll(".sidebar > ul >li");
     //console.log(elSection + '리스트');
     let idx = 0;
     let pos = { y: 0, y2: 0, state: true };
@@ -159,7 +163,8 @@ function sideBar() {
         });
       }, 100);
     });
-  });
+
+
 }
 //===========================사이드바 hide&show==================
 const sideNav = document.querySelector(".sidebar");
@@ -171,55 +176,202 @@ window.addEventListener("scroll", () => {
     sideNav.style = "display:none;";
   }
 });
+
+function thum(){
 //======================썸네일 이미지 클릭시 메인이미지 변경==================
-window.addEventListener('load', () => {
-  const spotZone = document.querySelectorAll('.content-zone'),
-    spotMainImg = document.querySelectorAll('.spot_main > img'),
-    spotSubImg = document.querySelectorAll('.content-zone > .spot_sub');
-  // let key = 3;
-  //=================잘되는거 보존==========
-  // spotSubImg.forEach(function (el, key) {
-  //   spotSubImg[key].addEventListener('click', () => {
+const spotZone = document.querySelectorAll('.content-zone'),
+spotMainImg = document.querySelectorAll('.spot_main > img'),
+spotSubImg = document.querySelectorAll('.content-zone > .spot_sub');
+// let key = 3;
+//=================잘되는거 보존==========
+// spotSubImg.forEach(function (el, key) {
+//   spotSubImg[key].addEventListener('click', () => {
 
-  //     spotImgbox = spotSubImg[key].querySelectorAll('img');
+//     spotImgbox = spotSubImg[key].querySelectorAll('img');
 
-  //     spotImgbox.forEach(function (el, key) {
-  //       console.log(spotImgbox[key], 'img')
-  //       spotMainImg[0].src = spotImgbox[key].src
-  //     })
+//     spotImgbox.forEach(function (el, key) {
+//       console.log(spotImgbox[key], 'img')
+//       spotMainImg[0].src = spotImgbox[key].src
+//     })
 
-  //     console.log(el, 'el')
-  //     console.log(key)
+//     console.log(el, 'el')
+//     console.log(key)
 
-  //     console.log(spotMainImg[key].src)
-  //     spotMainImg[0].src = `${spotMainImg[key].src}`
-  //   })
-  // })
-  // ========================수정 =======================
-  spotSubImg.forEach(function (el, key) {
-    console.log(el);
-    const spotImgbox = spotSubImg[key].querySelectorAll('img');
-    spotSubImg[key].addEventListener('click', function () {
-      console.log(this)
-      // console.log(bkey)
-
-      console.log(key, '컨텐츠존 key')
-      // console.log(bkey)
-      console.log(spotImgbox[1])
-      console.log(spotImgbox[2])
-
-      /* spotMainImg[key] */
-
-
-
-    })
-    spotImgbox.forEach(function (img, ikey) {
-      img.addEventListener('click', () => {
-        console.log(ikey, "ikey")
-        spotMainImg[key].src = `${spotImgbox[ikey].src}`
-      })
-    })
+//     console.log(spotMainImg[key].src)
+//     spotMainImg[0].src = `${spotMainImg[key].src}`
+//   })
+// })
+// ========================수정 =======================
+spotSubImg.forEach(function (el, key) {
+const spotImgbox = spotSubImg[key].querySelectorAll('img');
+spotImgbox.forEach(function (img, ikey) {
+  img.addEventListener('click', () => {
+    console.log(ikey, "ikey")
+    spotMainImg[key].src = `${spotImgbox[ikey].src}`
   })
-
+})
 })
 
+}
+function locationbox(data){
+  const dataArray = Object.entries(data)
+  //다른여정 js//
+  let category = ['전체'];
+
+  const locationName = document.querySelector('.location-name'),
+    buttons = document.querySelector('section.content-box .buttons'),
+    secContents = document.querySelector("section.content-box .contents"),
+    numOfContent = dataArray.length,
+    showContent = 4,
+    showButton = 5,
+    maxPage = Math.ceil(numOfContent / showContent);
+  let page = 1;
+  let categoryPage = '전체';
+  //지역 리스트//
+  dataArray.forEach(function (el, key) {
+    if (!category.includes(el[1].category)) {
+      category.push(el[1].category)
+    }
+
+  });
+  category.forEach(function (el, key) {
+    if (key == 0) {
+      locationName.innerHTML += `<button class = "${el} on" > ${el}</button>`
+    } else {
+      locationName.innerHTML += `<button class = ${el}> ${el}</button>`
+    }
+  });
+  // 지역 버튼을 누르면 해당 지역만 페이지 나오게
+  const locationBtn = document.querySelectorAll('.location-name > button');
+  let btnIdx = 0;
+  locationBtn.forEach((el, key) => {
+    el.addEventListener('click', () => {
+      buttons.classList.add('on'); // 버튼 안보이게 하기 
+      locationBtn[btnIdx].classList.remove('on');
+      el.classList.add('on');
+      btnIdx = key;
+      while (secContents.hasChildNodes()) {
+        secContents.removeChild(secContents.lastChild);
+      }
+      let count = 0;
+      let locationKey = [];
+      categoryPage = el.className.split(" ");
+      dataArray.forEach((el, key) => {
+        if (el[1].category == categoryPage[0]) {
+          locationKey.push(key)
+          count++;
+        }
+      })
+
+      // 지역 버튼이 전체이면 페이지 전체 보이고 버튼 보이게
+      if (categoryPage[0] == '전체') {
+        buttons.classList.remove('on');
+        render(page);
+      }
+      // 해당 지역 컨텐츠만 나오게
+      else {
+        for (let i = 0; i < count; i++) {
+
+          const content = document.createElement("div");
+          content.classList.add("content");
+
+          content.innerHTML = `<a href="./pages/location.html?local=location${locationKey[i] + 1}" class="">
+        <img class="front-img" src=".${(dataArray[locationKey[i]][1].img[0].url)}" alt="">
+        <img class="front-map" src=".${(dataArray[locationKey[i]][1].img[1].url)}" alt="">
+        <div class="location-text-box">
+        <h3>${(dataArray[locationKey[i]][1].category)}</h3>
+        <span>${(dataArray[locationKey[i]][1].place)}</span>
+        </div>
+        </a>
+        `;
+        secContents.appendChild(content)
+        }
+      }
+    })
+  })
+  const makeContent = (id) => {
+    const content = document.createElement("div");
+    content.classList.add("content");
+    content.innerHTML = `<a href="./pages/location.html?local=location${id}" class="spot${id}">
+      <img class="front-img" src=".${(dataArray[id - 1][1].img[0].url)}" alt="">
+      <img class="front-map" src=".${(dataArray[id - 1][1].img[1].url)}" alt="">
+      <div class="location-text-box">
+          <h3>${(dataArray[id - 1][1].category)}</h3>
+          <span>${(dataArray[id - 1][1].place)}</span>
+      </div>
+      </a>
+      `;
+    return content;
+  };
+
+  const makeButton = (id) => {
+    const button = document.createElement("button");
+    button.classList.add("button");
+    button.dataset.num = id;
+    button.innerText = id;
+    button.addEventListener("click", (e) => {
+      Array.prototype.forEach.call(buttons.children, (button) => {
+        if (button.dataset.num) button.classList.remove("active");
+      });
+      e.target.classList.add("active");
+      renderContent(parseInt(e.target.dataset.num), 'ALL');
+    });
+    return button;
+  };
+
+
+  const renderContent = (page) => {
+    // 목록 리스트 초기화
+    while (secContents.hasChildNodes()) {
+      secContents.removeChild(secContents.lastChild);
+    }
+    // 글의 최대 개수를 넘지 않는 선에서, 화면에 최대 10개의 글 생성
+    for (let id = (page - 1) * showContent + 1; id <= page * showContent && id <= numOfContent; id++) {
+      secContents.appendChild(makeContent(id));
+    }
+  };
+  const renderButton = (page) => {
+    // 버튼 리스트 초기화
+    while (buttons.hasChildNodes()) {
+      buttons.removeChild(buttons.lastChild);
+    }
+    // 화면에 최대 5개의 페이지 버튼 생성
+    for (let id = page; id < page + showButton && id <= maxPage; id++) {
+      buttons.appendChild(makeButton(id));
+    }
+    // 첫 버튼 활성화(class="active")
+    buttons.children[0].classList.add("active");
+    const goPrevPage = () => {
+      page -= showButton;
+      render(page);
+    };
+
+    const goNextPage = () => {
+      page += showButton;
+      render(page);
+    };
+    const prev = document.createElement("button");
+    prev.classList.add("button", "prev");
+    prev.innerHTML = '<div><img src = "../img/com/leftArrow.svg"></div>';
+    prev.addEventListener("click", goPrevPage);
+
+    const next = document.createElement("button");
+    next.classList.add("button", "next");
+    next.innerHTML = '<div><img src = "../img/com/rightArrow.svg"></div>';
+    next.addEventListener("click", goNextPage);
+
+    buttons.prepend(prev);
+    buttons.append(next);
+
+    // 이전, 다음 페이지 버튼이 필요한지 체크
+    if (page - showButton < 1) buttons.removeChild(prev);
+    if (page + showButton > maxPage) buttons.removeChild(next);
+  };
+  const render = (page) => {
+    renderContent(page);
+    renderButton(page);
+
+  };
+  render(page);
+
+}
