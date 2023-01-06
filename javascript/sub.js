@@ -174,12 +174,19 @@ function sideBar() {
 const sideNav = document.querySelector(".sidebar");
 
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 600) {
-    sideNav.style = "display:block;";
-  } else {
-    sideNav.style = "display:none;";
+  if (matchMedia("screen and (min-width : 768px)").matches) {
+    if (window.pageYOffset > 600) {
+      sideNav.style = "display:block;";
+    } else {
+      sideNav.style = "display:none;";
+    }
   }
 });
+
+
+
+
+
 
 function thum() {
   //======================썸네일 이미지 클릭시 메인이미지 변경==================
