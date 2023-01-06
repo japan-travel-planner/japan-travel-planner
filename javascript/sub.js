@@ -42,7 +42,7 @@ function init(location, data) {
     <section class="content-zone ${key}">
     <div class="text_content">
     <div class="title">${location.spot[key].title}</div>
-    <div class="detail">${location.spot[key].detail}</div>
+    <div class="detail"><p>${location.spot[key].detail}</p></div>
     </div>
     <div class="spot_main"></div>
     <div class="spot_sub"></div>       
