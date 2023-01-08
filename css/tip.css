@@ -954,7 +954,7 @@ footer::after{
   }
   
   .icon-box {
-    width: 20%;
+    width: 30%;
     height: 20px;
     display: flex;
     align-items: center;
@@ -964,6 +964,7 @@ footer::after{
   .icon-box>div {
     margin: 0 2px;
     margin-left: 0;
+    margin-right: 10px;
   }
   
   .icon-box>div>a>p {
