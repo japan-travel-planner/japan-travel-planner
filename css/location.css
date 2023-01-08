@@ -2864,8 +2864,6 @@ footer::after{
     content: "";
     display: block;
     width: 1px;
-
-    /* height: 1rem; */
     border-left: 1px solid #e2e1e1;
     position: absolute;
     bottom: -3px;
@@ -2939,7 +2937,7 @@ footer::after{
   }
   
   section.content-box .content>a img {
-    width: 98%;
+    width: 73px;
     height: 100px;
   
     filter: brightness(80%);
@@ -2954,7 +2952,6 @@ footer::after{
     bottom: 5px;
     left: 0;
     text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.2); */
   }
   
   section.content-box .location-text-box>h3 {

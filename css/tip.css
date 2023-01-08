@@ -921,7 +921,244 @@ footer::after{
 /* ========================= ~479 ======================= */
 /* ========================= ~479 ======================= */
 
-@media screen and (max-width : 479px)  {}
+@media screen and (max-width : 479px)  {
+
+
+  header {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  
+  .header-box {
+  
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+  } 
+  
+  .logo {
+    width: 20%;
+    margin: 16px 0 8px;
+  }
+
+  .logo a img {
+    width: 70px;
+  }
+  
+  .icon-box {
+    width: 20%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .icon-box>div {
+    margin: 0 2px;
+    margin-left: 0;
+  }
+  
+  .icon-box>div>a>p {
+    color: #fff;
+    font-size: 10px;
+  }
+  .login > a > img {
+    width: 16px;
+  }
+
+
+
+
+
+
+
+
+  footer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/com/footer-img-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: -60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+    
+  }
+  footer::after{
+    content: "";
+    width: 100%;
+    height: 130px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: linear-gradient(180deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+  }
+  .footer-box {
+    max-width: 300px;
+    margin: 0 auto;
+    
+  }
+  
+  .view-box {
+    padding-bottom: 10px;
+    width: 100px;        
+    float: left;
+    display: none;
+  }
+  .footer-box::before{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .view-box>.view-text {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .view-box>.view-text>h3 {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .footer-travel-box {
+    width: 65%;
+    height: 100px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    float: right;
+    display: none;
+  }
+ 
+  
+  .footer-travel-box>.travel-text {
+    width: 100%;
+  }
+  
+  .footer-travel-box>.travel-text>p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  
+  .footer-box>.footer-content {
+    border-top: 2px solid #fff;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5px;
+  }
+  .footer-box>.footer-content::before{
+    display: block;
+    clear: both;
+    content: '';
+  }
+  
+  .footet-logo-box {
+    width: 50%;
+  }
+  .footet-logo-box img {
+    width: 50px;
+  }
+  
+  .text-content {
+    display: flex;
+  }
+  
+  .text-box {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    order: 3;
+  }
+  
+  .text-content>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-content>ul::after{
+    content: "Copyright © ANA";
+    font-size: 10px;
+
+  }
+  
+  .text-content>ul>li {
+    margin: 2px 0;
+    position: relative;
+    font-size: 10px;
+    height: 10px;
+    margin-right: 15px;
+  }
+  
+  .text-content>ul>li::after {
+    content: "/";
+    display: block;
+    width: 1px;
+    color: #fff;
+    position: absolute;
+    right: -7px;
+    top: 0;
+  }
+  
+  .text-content>ul>li:nth-last-child(1):after {
+    content: "";
+  }
+  
+  .text-content>ul>li>a>p {
+    color: #fff;
+    font-size: 10px;
+    margin-right: 1px;
+  }
+  
+  .text-box>span {
+    display: flex;
+    margin-top: 1px;
+    color: #fff;
+    font-size: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 10px;
+    display: none;
+  }
+  
+  .text-box>span>p {
+    margin-left: 0;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  
+  .footer-icon-box {
+    text-align: end;
+    width: 50%;
+  }
+  
+  .footer-icon-box>a {
+    width: 21px;
+  }
+  .footer-icon-box>a img {
+    width: 20px;
+  }
+}
 
 /* ===========
 
