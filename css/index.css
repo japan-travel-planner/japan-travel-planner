@@ -561,12 +561,12 @@ footer::after{
   
   .logo {
     width: 20%;
-    margin: 27px 0;
+    margin: 24px 0 12px;
   }
   
   .icon-box {
-    width: 20%;
-    height: 50px;
+    width: 30%;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -574,51 +574,59 @@ footer::after{
   
   .icon-box>div {
     margin: 0 7px;
+    margin-left: 0;
+    margin-right: 10px;
   }
   
   .icon-box>div>a>p {
     color: #fff;
+    font: 14px;
+  }
+  .login > a > img {
+    width: 22px;
   }
   /* 메인 시작 */
   .main-top {
     margin: 0 auto;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    overflow: unset;
+    padding-top: 80px;
   }
   
   .viewBox {
-    height: 768px;
+    height: 370px;
   }
   
   .viewBox::before {
     z-index: 100;
     content: "";
     width: 100%;
-    height: 259px;
+    height: 200px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1%;
     display: block;
-    background: linear-gradient(360deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+    background: linear-gradient(0deg, #192229 45%, rgba(25, 34, 41, 0) 100%);
   }
   
   .viewBox::after {
     content: "";
     display: block;
-    width: 300px;
+    width: 150px;
     border-bottom: 1px solid #fff;
     position: absolute;
     right: 0;
     bottom: 50%;
-    transform: translateY(-200%);
+    transform: translateY(0%);
   }
   
   .viewBox>.imgbox {
     width: 100%;
-  
+    height: 300px;
     position: absolute;
     top: 0;
+    left: 0;
     opacity: 0;
     transition: 2s;
   }
@@ -630,76 +638,94 @@ footer::after{
   .viewBox>.imgbox>img {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 370px;
     filter: brightness(90%);
+    
   }
   
   .view-content-box {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 900px;
-    padding: 0 310px;
+    height: 300px;
+    padding: 0 15%;
   }
   
   .view-content {
     width: 100%;
-    height: 500px;
+    height: 300px;
   }
   
   .view-text-box {
-    padding-left: 16.5%;
+    padding-left: 13%;
     z-index: 10;
-    display: flex;
+    
+    width: 100%;
+    position: absolute;
+    height: 330px;
+    top: 0;
+    left: 0;
+    color: #fff;    
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    position: absolute;
-    height: 500px;
-    bottom: 0;
-    left: 0;
-    color: #fff;
+    margin-bottom: 0;
   }
   
   .view-text-box>.map-box {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 0;
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
   }
   
   .view-text-box>.map-box>span {
-    font-size: 90px;
+    font-size: 28px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
   
   .view-text-box>.map-box>img {
-    width: 200px;
-    transform: translate(-10%, 10%);
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    width: 180px;
+    transform: translate(0%,-15%);
   }
   
   .view-text-box>h2 {
-    font-size: 10px;
-    margin-bottom: 30px;
+    font-size: 36px;
+    margin-bottom: 16px;
     font-weight: 600;
+    height: 30px;    
   }
   
   .view-text-box>p {
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 500;
+    line-height: 16px;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   
   .view-text-box>div {
-    margin: 30px 30px 30px 0px;
+    margin: 20px 30px 20px 0px;
     width: 139px;
-    height: 52px;
+    height: 50px;
   }
   
   .view-text-box>div {
     position: relative;
     display: block;
     z-index: 101;
+  }
+  .view-text-box>div>a>img {
+    width: 100px;
   }
   
   /*  background-color: #fff; */
@@ -708,9 +734,9 @@ footer::after{
   /* 슬라이드 시작 */
   .swiper {
     overflow: hidden;
-    height: 150px;
+    height: 130px;
     position: absolute;
-    right: 310px;
+    right: 20%;
     bottom: 50%;
     transform: translateY(50%);
     z-index: 3;
@@ -718,36 +744,37 @@ footer::after{
   }
   
   .swiper>.swiper-wrapper>.swiper-slide {
-    width: 50px;
+    width: 60px;
     height: 30px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.6);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 22px;
   }
   
   .swiper>.swiper-wrapper>.swiper-slide-active {
     color: #fff;
-    font-size: 28px;
+    font-size: 26px;
   }
   
   /* 슬라이드 끝 */
   /* 다른여정 시작  */
   .location-name {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     width: 900px;
+    flex-wrap: wrap;
   }
   
   .location-name>button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 0 0.5rem;
+    /* padding: 0 0.5rem; */
     position: relative;
     font-family: "Noto Sans KR";
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
     text-decoration: none;
     display: inline-block;
     width: auto;
@@ -770,11 +797,11 @@ footer::after{
     content: "";
     display: block;
     width: 1px;
-    height: 1rem;
     border-left: 1px solid #e2e1e1;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
+    transform: scale(0.6);
   }
   
   .location-name>button:nth-last-child(1)::after {
@@ -787,21 +814,24 @@ footer::after{
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
   
   .content-box>.ex-box {
     text-align: center;
-    margin: 100px 0;
+    margin: 40px 0;
+    margin-top: 0;
   }
   
   .content-box>.ex-box>p {
-    font-size: 38px;
+    font-size: 26px;
     color: #fff;
     margin: 10px 0;
   }
   
   .content-box>.ex-box>span {
-    font-size: 38px;
+    font-size: 26px;
     color: #fff;
     line-height: 46%;
   }
@@ -816,7 +846,7 @@ footer::after{
     padding: 0.3em 0;
     list-style: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     position: relative;
   }
   .content:hover .front-map{
@@ -839,30 +869,37 @@ footer::after{
   }
   
   .content>a img {
-    width: 170px;
-    height: 220px;  
+    width: 145px;
+    height: 190px;  
     filter: brightness(80%);  
     border-radius: 2px;
   }
   
   .location-text-box {
     width: 100%;
-    height: 70px;
+    height: 42px;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
-    text-align: center;
+    text-align: center;    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 5px;
   }
   
   .location-text-box>h3 {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
   }
   
   .location-text-box>span {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
+    height: 12px;
+    
+    /* display: none; */
   }
   
   .contents a {
@@ -873,12 +910,12 @@ footer::after{
   
   .btn-box {
     width: 100%;
-    height: 100px;
+    height: 45px;
     text-align: center;
   }
   
   .buttons {
-    padding: 1rem 0;
+    padding: 5px 0;
     display: inline-flex;
     justify-content: center;
   }
@@ -888,8 +925,8 @@ footer::after{
   }
   
   .button {
-    padding: 0 1rem;
-    font-size: 1.2rem;
+    padding: 0 10px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.6);
     background: transparent;
     border: 0;
@@ -899,12 +936,12 @@ footer::after{
   
   .buttons>.prev {
     padding: 0;
-    width: 42px;
+    width: 20px;
   }
   
   .buttons>.next {
     padding: 0;
-    width: 42px;
+    width: 20px;
   }
   
   .buttons img {
@@ -920,27 +957,29 @@ footer::after{
   footer {
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 370px;
     background-image: url(../img/com/footer-img-1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position-y: -230px;
+    background-position-y: -60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding-bottom: 10px;
     
   }
   footer::after{
     content: "";
     width: 100%;
-    height: 359px;
+    height: 259px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -15%;
     display: block;
     background: linear-gradient(180deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+    
   }
   .footer-box {
     max-width: 900px;
@@ -949,47 +988,71 @@ footer::after{
   }
   
   .view-box {
-    padding-bottom: 150px;
-    width: 100%;
-  
+    padding-bottom: 10px;
+    width: 45%;        
+    float: left;
+    padding-left: 5px;
+    padding-top: 50px;
+    /* display: none; */
+  }
+  .footer-box::before{
+    content: '';
+    display: block;
+    clear: both;
   }
   
   .view-box>.view-text {
-    width: 50%;
+    width: 100%;
     position: relative;
     z-index: 10;
   }
   
   .view-box>.view-text>h3 {
     color: #fff;
-    font-size: 50px;
+    font-size: 30px;
   }
   
   .footer-travel-box {
-    width: 100%;
-    padding-bottom: 100px;
+    width: 55%;
+    height: 180px;
+    padding-bottom: 0;
+    padding-top: 50px;
+    overflow: hidden;
+    float: right;
+    /* display: none; */
   }
+ 
   
   .footer-travel-box>.travel-text {
-    width: 40%;
+    width: 100%;
   }
   
   .footer-travel-box>.travel-text>p {
     color: #fff;
-    font-size: 18px;
-    line-height: 165.5%;
+    font-size: 16px;
+    line-height: 18px;
   }
   
   .footer-box>.footer-content {
     border-top: 2px solid #fff;
-    height: 100px;
+    width: 100%;
+    height: 60px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 5px;
+  }
+  .footer-box>.footer-content::before{
+    display: block;
+    clear: both;
+    content: '';
   }
   
   .footet-logo-box {
-    width: 10%;
+    width: 50%;
+  }
+  .footet-logo-box img {
+    width: 65px;
   }
   
   .text-content {
@@ -997,18 +1060,31 @@ footer::after{
   }
   
   .text-box {
-    width: 60%;
+    width: 600px;
     display: flex;
     flex-direction: column;
+    order: 3;
   }
   
   .text-content>ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-content>ul::after{
+    content: "Copyright © ANA";
+    font-size: 10px;
+
   }
   
   .text-content>ul>li {
-    margin: 5px 0;
+    margin: 2px 0;
     position: relative;
+    font-size: 10px;
+    height: 10px;
+    margin-right: 15px;
   }
   
   .text-content>ul>li::after {
@@ -1017,7 +1093,7 @@ footer::after{
     width: 1px;
     color: #fff;
     position: absolute;
-    right: 20px;
+    right: -7px;
     top: 0;
   }
   
@@ -1027,30 +1103,37 @@ footer::after{
   
   .text-content>ul>li>a>p {
     color: #fff;
-    font-size: 16px;
-    margin-right: 30px;
+    font-size: 12px;
+    margin-right: 1px;
   }
   
   .text-box>span {
     display: flex;
-    margin-top: 10px;
+    margin-top: 1px;
     color: #fff;
-    font-size: 16px;
+    font-size: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 10px;
+    display: none;
   }
   
   .text-box>span>p {
-    margin-left: 20px;
+    margin-left: 0;
     color: #fff;
     transform: translateY(-2px);
   }
   
   .footer-icon-box {
     text-align: end;
-    width: 10%;
+    width: 50%;
   }
   
   .footer-icon-box>a {
-    width: 32px;
+    width: 25px;
+  }
+  .footer-icon-box>a img {
+    width: 25px;
   }
 }
 
@@ -1089,12 +1172,12 @@ footer::after{
   
   .logo {
     width: 20%;
-    margin: 27px 0;
+    margin: 24px 0 12px;
   }
   
   .icon-box {
-    width: 20%;
-    height: 50px;
+    width: 30%;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -1102,51 +1185,59 @@ footer::after{
   
   .icon-box>div {
     margin: 0 7px;
+    margin-left: 0;
+    margin-right: 10px;
   }
   
   .icon-box>div>a>p {
     color: #fff;
+    font: 14px;
+  }
+  .login > a > img {
+    width: 22px;
   }
   /* 메인 시작 */
   .main-top {
     margin: 0 auto;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    overflow: unset;
+    padding-top: 80px;
   }
   
   .viewBox {
-    height: 100%;
+    height: 370px;
   }
   
   .viewBox::before {
     z-index: 100;
     content: "";
     width: 100%;
-    height: 259px;
+    height: 200px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1%;
     display: block;
-    background: linear-gradient(360deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+    background: linear-gradient(0deg, #192229 45%, rgba(25, 34, 41, 0) 100%);
   }
   
   .viewBox::after {
     content: "";
     display: block;
-    width: 300px;
+    width: 150px;
     border-bottom: 1px solid #fff;
     position: absolute;
     right: 0;
     bottom: 50%;
-    transform: translateY(-200%);
+    transform: translateY(0%);
   }
   
   .viewBox>.imgbox {
     width: 100%;
-  
+    height: 300px;
     position: absolute;
     top: 0;
+    left: 0;
     opacity: 0;
     transition: 2s;
   }
@@ -1158,76 +1249,94 @@ footer::after{
   .viewBox>.imgbox>img {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 370px;
     filter: brightness(90%);
+    
   }
   
   .view-content-box {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 600px;
-    padding: 0 310px;
+    height: 300px;
+    padding: 0 15%;
   }
   
   .view-content {
     width: 100%;
-    height: 500px;
+    height: 300px;
   }
   
   .view-text-box {
-    padding-left: 16.5%;
+    padding-left: 13%;
     z-index: 10;
-    display: flex;
+    
+    width: 100%;
+    position: absolute;
+    height: 330px;
+    top: 0;
+    left: 0;
+    color: #fff;    
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    position: absolute;
-    height: 500px;
-    bottom: 0;
-    left: 0;
-    color: #fff;
+    margin-bottom: 0;
   }
   
   .view-text-box>.map-box {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 0;
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
   }
   
   .view-text-box>.map-box>span {
-    font-size: 100px;
+    font-size: 28px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
   
   .view-text-box>.map-box>img {
-    width: 200px;
-    transform: translate(-10%, 10%);
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    width: 180px;
+    transform: translate(0%,-15%);
   }
   
   .view-text-box>h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-size: 36px;
+    margin-bottom: 16px;
     font-weight: 600;
+    height: 30px;    
   }
   
   .view-text-box>p {
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 500;
+    line-height: 16px;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   
   .view-text-box>div {
-    margin: 30px 30px 30px 0px;
+    margin: 20px 30px 20px 0px;
     width: 139px;
-    height: 52px;
+    height: 50px;
   }
   
   .view-text-box>div {
     position: relative;
     display: block;
     z-index: 101;
+  }
+  .view-text-box>div>a>img {
+    width: 100px;
   }
   
   /*  background-color: #fff; */
@@ -1236,9 +1345,9 @@ footer::after{
   /* 슬라이드 시작 */
   .swiper {
     overflow: hidden;
-    height: 150px;
+    height: 130px;
     position: absolute;
-    right: 310px;
+    right: 20%;
     bottom: 50%;
     transform: translateY(50%);
     z-index: 3;
@@ -1246,36 +1355,37 @@ footer::after{
   }
   
   .swiper>.swiper-wrapper>.swiper-slide {
-    width: 50px;
+    width: 60px;
     height: 30px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.6);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 22px;
   }
   
   .swiper>.swiper-wrapper>.swiper-slide-active {
     color: #fff;
-    font-size: 28px;
+    font-size: 26px;
   }
   
   /* 슬라이드 끝 */
   /* 다른여정 시작  */
   .location-name {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     width: 600px;
+    flex-wrap: wrap;
   }
   
   .location-name>button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 0 0.5rem;
+    /* padding: 0 0.5rem; */
     position: relative;
     font-family: "Noto Sans KR";
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
     text-decoration: none;
     display: inline-block;
     width: auto;
@@ -1298,11 +1408,11 @@ footer::after{
     content: "";
     display: block;
     width: 1px;
-    height: 1rem;
     border-left: 1px solid #e2e1e1;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
+    transform: scale(0.6);
   }
   
   .location-name>button:nth-last-child(1)::after {
@@ -1315,21 +1425,24 @@ footer::after{
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
   
   .content-box>.ex-box {
     text-align: center;
-    margin: 100px 0;
+    margin: 40px 0;
+    margin-top: 0;
   }
   
   .content-box>.ex-box>p {
-    font-size: 38px;
+    font-size: 26px;
     color: #fff;
     margin: 10px 0;
   }
   
   .content-box>.ex-box>span {
-    font-size: 38px;
+    font-size: 26px;
     color: #fff;
     line-height: 46%;
   }
@@ -1344,7 +1457,7 @@ footer::after{
     padding: 0.3em 0;
     list-style: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     position: relative;
   }
   .content:hover .front-map{
@@ -1367,30 +1480,37 @@ footer::after{
   }
   
   .content>a img {
-    width: 170px;
-    height: 220px;  
+    width: 145px;
+    height: 190px;  
     filter: brightness(80%);  
     border-radius: 2px;
   }
   
   .location-text-box {
     width: 100%;
-    height: 70px;
+    height: 42px;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
-    text-align: center;
+    text-align: center;    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 5px;
   }
   
   .location-text-box>h3 {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
   }
   
   .location-text-box>span {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
+    height: 12px;
+    
+    /* display: none; */
   }
   
   .contents a {
@@ -1401,12 +1521,12 @@ footer::after{
   
   .btn-box {
     width: 100%;
-    height: 100px;
+    height: 45px;
     text-align: center;
   }
   
   .buttons {
-    padding: 1rem 0;
+    padding: 5px 0;
     display: inline-flex;
     justify-content: center;
   }
@@ -1416,8 +1536,8 @@ footer::after{
   }
   
   .button {
-    padding: 0 1rem;
-    font-size: 1.2rem;
+    padding: 0 10px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.6);
     background: transparent;
     border: 0;
@@ -1427,12 +1547,12 @@ footer::after{
   
   .buttons>.prev {
     padding: 0;
-    width: 42px;
+    width: 20px;
   }
   
   .buttons>.next {
     padding: 0;
-    width: 42px;
+    width: 20px;
   }
   
   .buttons img {
@@ -1448,27 +1568,29 @@ footer::after{
   footer {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 370px;
     background-image: url(../img/com/footer-img-1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position-y: -230px;
+    background-position-y: -60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding-bottom: 10px;
     
   }
   footer::after{
     content: "";
     width: 100%;
-    height: 359px;
+    height: 259px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -15%;
     display: block;
     background: linear-gradient(180deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+    
   }
   .footer-box {
     max-width: 600px;
@@ -1477,47 +1599,71 @@ footer::after{
   }
   
   .view-box {
-    padding-bottom: 150px;
-    width: 100%;
-  
+    padding-bottom: 10px;
+    width: 45%;        
+    float: left;
+    padding-left: 5px;
+    padding-top: 50px;
+    /* display: none; */
+  }
+  .footer-box::before{
+    content: '';
+    display: block;
+    clear: both;
   }
   
   .view-box>.view-text {
-    width: 50%;
+    width: 100%;
     position: relative;
     z-index: 10;
   }
   
   .view-box>.view-text>h3 {
     color: #fff;
-    font-size: 50px;
+    font-size: 30px;
   }
   
   .footer-travel-box {
-    width: 100%;
-    padding-bottom: 100px;
+    width: 55%;
+    height: 180px;
+    padding-bottom: 0;
+    padding-top: 50px;
+    overflow: hidden;
+    float: right;
+    /* display: none; */
   }
+ 
   
   .footer-travel-box>.travel-text {
-    width: 40%;
+    width: 100%;
   }
   
   .footer-travel-box>.travel-text>p {
     color: #fff;
-    font-size: 18px;
-    line-height: 165.5%;
+    font-size: 16px;
+    line-height: 18px;
   }
   
   .footer-box>.footer-content {
     border-top: 2px solid #fff;
-    height: 100px;
+    width: 100%;
+    height: 60px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 5px;
+  }
+  .footer-box>.footer-content::before{
+    display: block;
+    clear: both;
+    content: '';
   }
   
   .footet-logo-box {
-    width: 10%;
+    width: 50%;
+  }
+  .footet-logo-box img {
+    width: 65px;
   }
   
   .text-content {
@@ -1525,18 +1671,31 @@ footer::after{
   }
   
   .text-box {
-    width: 60%;
+    width: 900px;
     display: flex;
     flex-direction: column;
+    order: 3;
   }
   
   .text-content>ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-content>ul::after{
+    content: "Copyright © ANA";
+    font-size: 10px;
+
   }
   
   .text-content>ul>li {
-    margin: 5px 0;
+    margin: 2px 0;
     position: relative;
+    font-size: 10px;
+    height: 10px;
+    margin-right: 15px;
   }
   
   .text-content>ul>li::after {
@@ -1545,7 +1704,7 @@ footer::after{
     width: 1px;
     color: #fff;
     position: absolute;
-    right: 20px;
+    right: -7px;
     top: 0;
   }
   
@@ -1555,30 +1714,37 @@ footer::after{
   
   .text-content>ul>li>a>p {
     color: #fff;
-    font-size: 16px;
-    margin-right: 30px;
+    font-size: 12px;
+    margin-right: 1px;
   }
   
   .text-box>span {
     display: flex;
-    margin-top: 10px;
+    margin-top: 1px;
     color: #fff;
-    font-size: 16px;
+    font-size: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 10px;
+    display: none;
   }
   
   .text-box>span>p {
-    margin-left: 20px;
+    margin-left: 0;
     color: #fff;
     transform: translateY(-2px);
   }
   
   .footer-icon-box {
     text-align: end;
-    width: 10%;
+    width: 50%;
   }
   
   .footer-icon-box>a {
-    width: 32px;
+    width: 25px;
+  }
+  .footer-icon-box>a img {
+    width: 25px;
   }
   
   
@@ -1597,7 +1763,7 @@ footer::after{
 
 @media screen and (min-width : 480px) and (max-width : 767px)  {
   header {
-    width: 500px;
+    width: 450px;
     height: 100px;
     position: absolute;
     top: 0;
@@ -1608,7 +1774,7 @@ footer::after{
   
   .header-box {
   
-    max-width: 500px;
+    max-width: 450px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1618,12 +1784,12 @@ footer::after{
   
   .logo {
     width: 20%;
-    margin: 27px 0;
+    margin: 24px 0 12px;
   }
   
   .icon-box {
-    width: 20%;
-    height: 50px;
+    width: 30%;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -1631,51 +1797,59 @@ footer::after{
   
   .icon-box>div {
     margin: 0 7px;
+    margin-left: 0;
+    margin-right: 10px;
   }
   
   .icon-box>div>a>p {
     color: #fff;
+    font: 14px;
+  }
+  .login > a > img {
+    width: 22px;
   }
   /* 메인 시작 */
   .main-top {
     margin: 0 auto;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    overflow: unset;
+    padding-top: 60px;
   }
   
   .viewBox {
-    height: 100%;
+    height: 270px;
   }
   
   .viewBox::before {
     z-index: 100;
     content: "";
     width: 100%;
-    height: 259px;
+    height: 70px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -0.5%;
     display: block;
-    background: linear-gradient(360deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+    background: linear-gradient(0deg, #192229 25%, rgba(25, 34, 41, 0) 100%);
   }
   
   .viewBox::after {
     content: "";
     display: block;
-    width: 300px;
+    width: 85px;
     border-bottom: 1px solid #fff;
     position: absolute;
     right: 0;
-    bottom: 50%;
-    transform: translateY(-200%);
+    bottom: 45%;
+    transform: translateY(0%);
   }
   
   .viewBox>.imgbox {
     width: 100%;
-  
+    height: 300px;
     position: absolute;
     top: 0;
+    left: 0;
     opacity: 0;
     transition: 2s;
   }
@@ -1687,76 +1861,94 @@ footer::after{
   .viewBox>.imgbox>img {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 330px;
     filter: brightness(90%);
+    
   }
   
   .view-content-box {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 500px;
-    padding: 0 310px;
+    height: 300px;
+    padding: 0 15%;
   }
   
   .view-content {
     width: 100%;
-    height: 500px;
+    height: 300px;
   }
   
   .view-text-box {
-    padding-left: 16.5%;
+    padding-left: 13%;
     z-index: 10;
-    display: flex;
+    
+    width: 100%;
+    position: absolute;
+    height: 330px;
+    top: 0;
+    left: 0;
+    color: #fff;    
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    position: absolute;
-    height: 500px;
-    bottom: 0;
-    left: 0;
-    color: #fff;
+    margin-bottom: 0;
   }
   
   .view-text-box>.map-box {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 0;
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
   }
   
   .view-text-box>.map-box>span {
-    font-size: 100px;
+    font-size: 24px;
     font-weight: bold;
+    margin-bottom: 14px;
   }
   
   .view-text-box>.map-box>img {
-    width: 200px;
-    transform: translate(-10%, 10%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    transform: translate(0%,-45%);
   }
   
   .view-text-box>h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-size: 26px;
+    margin-bottom: 16px;
     font-weight: 600;
+    height: 20px;    
   }
   
   .view-text-box>p {
-    font-size: 28px;
+    font-size: 12px;
     font-weight: 500;
+    line-height: 12px;
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   
   .view-text-box>div {
-    margin: 30px 30px 30px 0px;
+    margin: 20px 30px 20px 0px;
     width: 139px;
-    height: 52px;
+    height: 50px;
   }
   
   .view-text-box>div {
     position: relative;
     display: block;
     z-index: 101;
+  }
+  .view-text-box>div>a>img {
+    width: 55px;
   }
   
   /*  background-color: #fff; */
@@ -1765,10 +1957,10 @@ footer::after{
   /* 슬라이드 시작 */
   .swiper {
     overflow: hidden;
-    height: 150px;
+    height: 120px;
     position: absolute;
-    right: 310px;
-    bottom: 50%;
+    right: 90px;
+    bottom: 45%;
     transform: translateY(50%);
     z-index: 3;
     text-align: end;
@@ -1776,35 +1968,36 @@ footer::after{
   
   .swiper>.swiper-wrapper>.swiper-slide {
     width: 50px;
-    height: 30px;
+    height: 10px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.6);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 16px;
   }
   
   .swiper>.swiper-wrapper>.swiper-slide-active {
     color: #fff;
-    font-size: 28px;
+    font-size: 20px;
   }
   
   /* 슬라이드 끝 */
   /* 다른여정 시작  */
   .location-name {
     display: flex;
-    justify-content: end;
-    width: 500px;
+    justify-content: center;
+    width: 450px;
+    flex-wrap: wrap;
   }
   
   .location-name>button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 0 0.5rem;
+    /* padding: 0 0.5rem; */
     position: relative;
     font-family: "Noto Sans KR";
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 10px;
+    font-weight: 400;
     text-decoration: none;
     display: inline-block;
     width: auto;
@@ -1827,11 +2020,11 @@ footer::after{
     content: "";
     display: block;
     width: 1px;
-    height: 1rem;
     border-left: 1px solid #e2e1e1;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
+    transform: scale(0.6);
   }
   
   .location-name>button:nth-last-child(1)::after {
@@ -1844,21 +2037,24 @@ footer::after{
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
   
   .content-box>.ex-box {
     text-align: center;
-    margin: 100px 0;
+    margin: 40px 0;
+    margin-top: 0;
   }
   
   .content-box>.ex-box>p {
-    font-size: 38px;
+    font-size: 20px;
     color: #fff;
     margin: 10px 0;
   }
   
   .content-box>.ex-box>span {
-    font-size: 38px;
+    font-size: 20px;
     color: #fff;
     line-height: 46%;
   }
@@ -1873,7 +2069,7 @@ footer::after{
     padding: 0.3em 0;
     list-style: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     position: relative;
   }
   .content:hover .front-map{
@@ -1889,37 +2085,44 @@ footer::after{
     transition: 1s;
   }
   .contents {
-    width: 500px;
+    width: 450px;
     position: relative;
     display: flex;
     justify-content: space-around;
   }
   
   .content>a img {
-    width: 170px;
-    height: 220px;  
+    width: 110px;
+    height: 145px;  
     filter: brightness(80%);  
     border-radius: 2px;
   }
   
   .location-text-box {
     width: 100%;
-    height: 70px;
+    height: 35px;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
-    text-align: center;
+    text-align: center;    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 5px;
   }
   
   .location-text-box>h3 {
-    font-size: 32px;
+    font-size: 16px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
   }
   
   .location-text-box>span {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 10px;
+    font-weight: 400;
+    height: 10px;
+    
+    /* display: none; */
   }
   
   .contents a {
@@ -1930,12 +2133,12 @@ footer::after{
   
   .btn-box {
     width: 100%;
-    height: 100px;
+    height: 35px;
     text-align: center;
   }
   
   .buttons {
-    padding: 1rem 0;
+    padding: 5px 0;
     display: inline-flex;
     justify-content: center;
   }
@@ -1945,8 +2148,8 @@ footer::after{
   }
   
   .button {
-    padding: 0 1rem;
-    font-size: 1.2rem;
+    padding: 0 10px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.6);
     background: transparent;
     border: 0;
@@ -1956,12 +2159,12 @@ footer::after{
   
   .buttons>.prev {
     padding: 0;
-    width: 42px;
+    width: 16px;
   }
   
   .buttons>.next {
     padding: 0;
-    width: 42px;
+    width: 16px;
   }
   
   .buttons img {
@@ -1977,76 +2180,102 @@ footer::after{
   footer {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 300px;
     background-image: url(../img/com/footer-img-1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position-y: -230px;
+    background-position-y: -60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding-bottom: 10px;
     
   }
   footer::after{
     content: "";
     width: 100%;
-    height: 359px;
+    height: 170px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -15%;
     display: block;
     background: linear-gradient(180deg, #192229 18.05%, rgba(25, 34, 41, 0) 100%);
+    
   }
   .footer-box {
-    max-width: 500px;
+    max-width: 450px;
     margin: 0 auto;
     
   }
   
   .view-box {
-    padding-bottom: 150px;
-    width: 100%;
-  
+    padding-bottom: 10px;
+    width: 45%;        
+    float: left;
+    padding-left: 5px;
+    padding-top: 50px;
+    /* display: none; */
+  }
+  .footer-box::before{
+    content: '';
+    display: block;
+    clear: both;
   }
   
   .view-box>.view-text {
-    width: 50%;
+    width: 100%;
     position: relative;
     z-index: 10;
   }
   
   .view-box>.view-text>h3 {
     color: #fff;
-    font-size: 50px;
+    font-size: 22px;
   }
   
   .footer-travel-box {
-    width: 100%;
-    padding-bottom: 100px;
+    width: 55%;
+    height: 150px;
+    padding-bottom: 0;
+    padding-top: 50px;
+    overflow: hidden;
+    float: right;
+    /* display: none; */
   }
+ 
   
   .footer-travel-box>.travel-text {
-    width: 40%;
+    width: 100%;
   }
   
   .footer-travel-box>.travel-text>p {
     color: #fff;
-    font-size: 18px;
-    line-height: 165.5%;
+    font-size: 12px;
+    line-height: 12px;
   }
   
   .footer-box>.footer-content {
     border-top: 2px solid #fff;
-    height: 100px;
+    width: 100%;
+    height: 60px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 5px;
+  }
+  .footer-box>.footer-content::before{
+    display: block;
+    clear: both;
+    content: '';
   }
   
   .footet-logo-box {
-    width: 10%;
+    width: 50%;
+  }
+  .footet-logo-box img {
+    width: 50px;
   }
   
   .text-content {
@@ -2054,18 +2283,31 @@ footer::after{
   }
   
   .text-box {
-    width: 60%;
+    width: 450px;
     display: flex;
     flex-direction: column;
+    order: 3;
   }
   
   .text-content>ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-content>ul::after{
+    content: "Copyright © ANA";
+    font-size: 10px;
+
   }
   
   .text-content>ul>li {
-    margin: 5px 0;
+    margin: 2px 0;
     position: relative;
+    font-size: 10px;
+    height: 10px;
+    margin-right: 15px;
   }
   
   .text-content>ul>li::after {
@@ -2074,7 +2316,7 @@ footer::after{
     width: 1px;
     color: #fff;
     position: absolute;
-    right: 20px;
+    right: -7px;
     top: 0;
   }
   
@@ -2084,30 +2326,37 @@ footer::after{
   
   .text-content>ul>li>a>p {
     color: #fff;
-    font-size: 16px;
-    margin-right: 30px;
+    font-size: 10px;
+    margin-right: 1px;
   }
   
   .text-box>span {
     display: flex;
-    margin-top: 10px;
+    margin-top: 1px;
     color: #fff;
-    font-size: 16px;
+    font-size: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 10px;
+    display: none;
   }
   
   .text-box>span>p {
-    margin-left: 20px;
+    margin-left: 0;
     color: #fff;
     transform: translateY(-2px);
   }
   
   .footer-icon-box {
     text-align: end;
-    width: 10%;
+    width: 50%;
   }
   
   .footer-icon-box>a {
-    width: 32px;
+    width: 21px;
+  }
+  .footer-icon-box>a img {
+    width: 20px;
   }
 }
 
