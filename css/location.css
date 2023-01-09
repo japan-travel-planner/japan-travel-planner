@@ -285,8 +285,8 @@ body {
   fill:#767676;
 }
 .trail-cont > svg >.on {
-  fill:red;
-  stroke: red;
+  fill:white;
+  stroke: white;
 }
 
 .trail-cont:nth-child(1) {
@@ -400,6 +400,7 @@ section.content-box .contents {
   position: relative;
   display: flex;
   justify-content: space-around;
+  
 }
 
 section.content-box .content>a img {
