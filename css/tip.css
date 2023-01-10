@@ -1229,6 +1229,9 @@ footer::after {
   .text-box-aa > li {
     font-size: 14px;
   }
+  .text-box-aa > li:nth-child(2) {
+    margin-top: 5px;
+  }
   .text-radius {
     width: 6px;
     height: 6px;
