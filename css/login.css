@@ -5,11 +5,22 @@ body {
 header {
   width: 1300px;
   height: 100px;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+}
+
+.total {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+
+section > * {
+  margin: 0 auto;
 }
 
 .header-box {
@@ -45,9 +56,9 @@ header {
 
 .login-box {
   width: 500px;
-  height: 350px;
-  margin: 20px auto 0;
+  margin: 0 auto;
   background-color: white;
+  padding: 40px 0 0;
 }
 
 .logo-header {
@@ -62,26 +73,31 @@ header {
 }
 .id-pass {
   width: 300px;
-  height: 100px;
-  background-color: blueviolet;
-  margin: 20px auto 0;
+  /* background-color: blueviolet; */
+  margin: 0 auto;
 }
-.id-pass > li {
+.id-pass > h2 {
+font-size: 26px;
+}
+.id-pass > div {
   text-align: center;
 }
-.id-pass > li > input {
+.id-pass > div:nth-child(1){
+  margin-bottom: 1px;
+}
+.id-pass > div > input {
   width: 100%;
   height: 50px;
 }
-.id-pass > li > input::placeholder {
+.id-pass > div > input::placeholder {
   padding-left: 20px;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 .login-button {
   width: 300px;
-
-  margin: 30px auto 0;
+  margin: 3px auto 0;
   text-align: center;
 }
 .login-button > input {
@@ -108,15 +124,16 @@ header {
 /* login */
 .sign-box {
   width: 500px;
-  height: 350px;
-  margin: 30px auto 0;
+  margin: 25px auto 0;
   background: white;
+  padding-bottom: 20px;
+  
 }
 
 .sign-box > div {
   width: 300px;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 1px;
 }
 .sign-box > div > span {
   display: block;
@@ -124,18 +141,24 @@ header {
 }
 .sign-box > div > input {
   width: 100%;
-  height: 30px;
+  height: 50px;
+}
+
+.sign-box > div > input::placeholder {
+  padding-left: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 .joinbutton {
   width: 300px;
-
-  margin: 30px auto 0;
-  padding-top: 20px;
+  margin: 0px auto 0;
   text-align: center;
+  margin-top: 3px;
 }
 .joinbutton > input {
   width: 100%;
 
+  height: 50px;
   background-color: #192229;
   color: #fff;
   cursor: pointer;
@@ -146,6 +169,23 @@ header {
 
 span {
   color: #000;
+}
+
+.Clearbutton {
+  width: 300px;
+  margin: 0px auto 0;
+  text-align: center;
+  margin-top: 30px;
+}
+.Clearbutton > input {
+  width: 100%;
+  height: 50px;
+  background-color: #192229;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-family: "Noto Sans KR";
+  font-weight: bold;
 }
 
 footer {

@@ -181,7 +181,7 @@ const input = document.querySelector('#first'),
   check_id = check_1.querySelector('input'),
   check_2 = document.querySelector('#login2'),
   check_password = check_2.querySelector('input'),
-  loginBtn = document.querySelector('.loginbutton');
+  loginBtn = document.querySelector('.login-button');
 
 //================ 회원가입 기능 =================//
 const signUP = () => {
