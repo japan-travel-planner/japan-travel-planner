@@ -182,7 +182,7 @@ header {
   right: 310px;
   bottom: 50%;
   transform: translateY(50%);
-  z-index: 3;
+  z-index: 33;
   text-align: end;
 }
 
@@ -739,7 +739,7 @@ footer::after{
     right: 20%;
     bottom: 50%;
     transform: translateY(50%);
-    z-index: 3;
+    z-index: 33;
     text-align: end;
   }
   
@@ -1350,7 +1350,7 @@ footer::after{
     right: 20%;
     bottom: 50%;
     transform: translateY(50%);
-    z-index: 3;
+    z-index: 33;
     text-align: end;
   }
   
@@ -1962,7 +1962,7 @@ footer::after{
     right: 90px;
     bottom: 45%;
     transform: translateY(50%);
-    z-index: 3;
+    z-index: 33;
     text-align: end;
   }
   
@@ -2576,7 +2576,7 @@ footer::after{
     right: 90px;
     bottom: 50%;
     transform: translateY(50%);
-    z-index: 3;
+    z-index: 33;
     text-align: end;
   }
   
