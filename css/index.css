@@ -98,7 +98,7 @@ header {
 .viewBox>.imgbox>img {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 1080px;
   filter: brightness(90%);
 }
 
